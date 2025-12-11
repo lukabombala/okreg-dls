@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "okreg-dls",
+    "okreg-dls": "okreg-dls"
+  },
+  "targets": {},
+  "etags": {}
+}
