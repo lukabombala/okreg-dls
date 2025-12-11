@@ -1,42 +1,93 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.zhr-navbar {
+  background: #fff !important;
+  border-bottom: 2px solid #7a9c4b;
+  font-family: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.zhr-logo {
+  background: #31491d;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
-.card {
-  padding: 2em;
+.brand-title {
+  font-weight: bold;
+  color: #31491d;
 }
 
-.read-the-docs {
+.brand-desc {
+  font-size: 0.85rem;
   color: #888;
+}
+
+.zhr-navbar .navbar-nav .nav-link,
+.zhr-navbar .navbar-nav .dropdown-toggle {
+  font-weight: bold;
+  color: #1a1a1a !important;
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+  margin-right: 0.5rem;
+  transition: color 0.2s, background 0.2s;
+}
+
+.zhr-navbar .navbar-nav .nav-link:hover,
+.zhr-navbar .navbar-nav .dropdown-toggle:hover,
+.zhr-navbar .navbar-nav .show > .nav-link,
+.zhr-navbar .navbar-nav .show > .dropdown-toggle {
+  color: #31491d !important;
+  background: #f3f7ef !important;
+}
+
+.zhr-navbar .btn-outline-primary {
+  border-color: #31491d;
+  color: #31491d;
+  font-weight: bold;
+  background: #fff;
+}
+
+.zhr-navbar .btn-outline-primary:hover {
+  background: #31491d;
+  color: #fff;
+}
+
+.zhr-navbar .btn-primary {
+  background: #31491d;
+  border-color: #31491d;
+  font-weight: bold;
+}
+
+.zhr-navbar .btn-primary:hover {
+  background: #466c2b;
+  border-color: #466c2b;
+}
+
+.zhr-navbar .d-flex.gap-2 {
+  gap: 0.75rem !important;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }

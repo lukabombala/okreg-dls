@@ -1,35 +1,88 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import "bootstrap/dist/css/bootstrap.min.css";
+import './App.css';
+import Navigation from "./Navigation";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Strony
+function Home() { return <h2>Strona główna</h2>; }
+function About() { return <h2>O Okręgu</h2>; }
+function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
+function AboutZHR() { return <h2>O ZHR</h2>; }
+function MaleBanner() { return <h2>Chorągiew Męska</h2>; }
+function FemaleBanner() { return <h2>Chorągiew Żeńska</h2>; }
+function Troops() { return <h2>Szczepy</h2>; }
+function Obwod() { return <h2>Ostrzeszowski Obwód ZHR</h2>; }
+function FindUnit() { return <h2>Znajdź jednostkę</h2>; }
+function ParentsSafety() { return <h2>Bezpieczny ZHR</h2>; }
+function ParentsMethod() { return <h2>Metoda Harcerska</h2>; }
+function ParentsFees() { return <h2>Składki + Nr kont</h2>; }
+function ParentsInvoice() { return <h2>Faktura za obóz/kolonię/zimowisko</h2>; }
+function ParentsInsurance() { return <h2>Ubezpieczenie</h2>; }
+function Media() { return <h2>Dla Mediów</h2>; }
+function HoprNews() { return <h2>HOPR Aktualności</h2>; }
+function HoprInfo() { return <h2>HOPR Ogólne Informacje</h2>; }
+function HoprTrainings() { return <h2>HOPR Najbliższe Szkolenia</h2>; }
+function RealEstateInfo() { return <h2>Nieruchomości Informacje</h2>; }
+function RealEstateWinsko() { return <h2>Wińsko</h2>; }
+function RealEstatePomorska() { return <h2>Rezerwacje Pomorskiej</h2>; }
+function RealEstateZatoka() { return <h2>Zatoka</h2>; }
+function Contact() { return <h2>Kontakt</h2>; }
+function OneAndHalfPercent() { return <h2>1,5%</h2>; }
+function Login() { return <h2>Zaloguj się</h2>; }
+function NotFound() { return <h2>404 - Nie znaleziono strony</h2>; }
 
+// Footer
+function Footer() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <footer className="text-center py-4 mt-5 border-top" style={{background: "#f8f9fa"}}>
+      <small>
+        &copy; {new Date().getFullYear()} Okręg Dolnośląski ZHR. Wszelkie prawa zastrzeżone.
+      </small>
+    </footer>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <div className="d-flex flex-column min-vh-100">
+        <Navigation />
+        <Container className="flex-grow-1 mt-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/o-nas" element={<About />} />
+            <Route path="/o-nas/wladze" element={<Authorities />} />
+            <Route path="/o-nas/zhr" element={<AboutZHR />} />
+            <Route path="/jednostki/choragiew-meska" element={<MaleBanner />} />
+            <Route path="/jednostki/choragiew-zenska" element={<FemaleBanner />} />
+            <Route path="/jednostki/szczepy" element={<Troops />} />
+            <Route path="/jednostki/obwod" element={<Obwod />} />
+            <Route path="/znajdz-jednostke" element={<FindUnit />} />
+            <Route path="/dla-rodzicow/bezpieczenstwo" element={<ParentsSafety />} />
+            <Route path="/dla-rodzicow/metoda" element={<ParentsMethod />} />
+            <Route path="/dla-rodzicow/skladki" element={<ParentsFees />} />
+            <Route path="/dla-rodzicow/faktura" element={<ParentsInvoice />} />
+            <Route path="/dla-rodzicow/ubezpieczenie" element={<ParentsInsurance />} />
+            <Route path="/dla-mediow" element={<Media />} />
+            <Route path="/hopr" element={<HoprNews />} />
+            <Route path="/hopr/info" element={<HoprInfo />} />
+            <Route path="/hopr/szkolenia" element={<HoprTrainings />} />
+            <Route path="/nieruchomosci" element={<RealEstateInfo />} />
+            <Route path="/nieruchomosci/winsko" element={<RealEstateWinsko />} />
+            <Route path="/nieruchomosci/pomorska" element={<RealEstatePomorska />} />
+            <Route path="/nieruchomosci/zatoka" element={<RealEstateZatoka />} />
+            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/1-5-procent" element={<OneAndHalfPercent />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Container>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
