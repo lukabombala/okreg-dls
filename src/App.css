@@ -91,3 +91,27 @@
   align-items: center;
   width: 100%;
 }
+
+.zhr-navbar {
+  background: #fff !important;
+  border-bottom: 2px solid #7a9c4b;
+  font-family: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+}

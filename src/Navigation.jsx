@@ -19,7 +19,7 @@ function Navigation() {
   };
 
   return (
-    <Navbar expand="lg" sticky="top" className="mb-4 zhr-navbar w-100">
+    <Navbar expand="lg" sticky="top" className="mb-4 zhr-navbar w-100 p-0" style={{minHeight: "64px"}}>
       <div className="navbar-inner">
         <Navbar.Brand as={Link} to="/" className="me-4">
           <span className="zhr-logo">ZHR</span>
