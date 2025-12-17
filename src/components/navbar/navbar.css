@@ -1,0 +1,244 @@
+/* Kolory i zmienne */
+:root {
+  --zhr-green: #2d5016;
+  --zhr-green-light: #3d6b1f;
+  --zhr-green-lighter: #f0f4ed;
+  --zhr-dark: #1a1a1a;
+  --zhr-border: #e0e6d9;
+  --zhr-accent: #e8f0e3;
+  --zhr-radius: 10px;
+}
+
+/* Navbar główny */
+.zhr-navbar {
+  background: #fff !important;
+  border-bottom: 2px solid var(--zhr-green-light);
+  font-family: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wewnętrzny kontener navbara */
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo ZHR */
+.zhr-logo {
+  background: var(--zhr-green);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Teksty przy logo */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  margin-left: 8px;
+}
+.brand-title {
+  font-weight: bold;
+  color: var(--zhr-green);
+  font-size: 1rem;
+}
+.brand-desc {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Linki w navbarze */
+.zhr-navbar .navbar-nav .nav-link,
+.zhr-navbar .navbar-nav .dropdown-toggle {
+  font-weight: bold;
+  color: var(--zhr-dark) !important;
+  letter-spacing: 0.01em;
+  font-size: 0.97rem;
+  margin-right: 0.2rem;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 0;
+  padding: 7px 10px;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.zhr-navbar .navbar-nav .nav-link:hover,
+.zhr-navbar .navbar-nav .dropdown-toggle:hover,
+.zhr-navbar .navbar-nav .show > .nav-link,
+.zhr-navbar .navbar-nav .show > .dropdown-toggle {
+  color: var(--zhr-green) !important;
+  background: var(--zhr-accent) !important;
+}
+
+/* Dropdown menu - płasko, bez cienia, z animacją fade/slide */
+.navbar-menu .dropdown-menu {
+  border-radius: 8px;
+  border: 1px solid var(--zhr-border);
+  margin-top: 8px;
+  min-width: 320px;
+  max-width: 95vw;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: none;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.18s cubic-bezier(.4,0,.2,1), transform 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+.navbar-menu.show .dropdown-menu,
+.navbar-menu .dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Linki w dropdownie */
+.navbar-dropdown-item {
+  transition: background 0.18s, color 0.18s;
+  border-radius: 0;
+  padding: 10px 18px;
+  font-size: 0.97rem;
+  color: var(--zhr-dark);
+  background: transparent;
+  border: none;
+  white-space: normal;
+}
+
+.navbar-dropdown-item:hover,
+.navbar-dropdown-item:focus {
+  background: var(--zhr-accent);
+  color: var(--zhr-green);
+}
+
+/* Przycisk 1,5% */
+.zhr-navbar .btn-outline-primary {
+  border-color: var(--zhr-green);
+  color: var(--zhr-green);
+  font-weight: bold;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px 18px !important;
+  font-size: 0.97rem;
+  line-height: 1.2;
+  min-height: 36px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s;
+  box-sizing: border-box;
+}
+.zhr-navbar .btn-outline-primary:hover {
+  background: var(--zhr-green);
+  color: #fff;
+}
+
+/* Przycisk Zaloguj się */
+.zhr-navbar .btn-primary {
+  background: var(--zhr-green);
+  border-color: var(--zhr-green);
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 4px 18px !important;
+  font-size: 0.97rem;
+  line-height: 1.2;
+  min-height: 36px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s;
+  box-sizing: border-box;
+}
+.zhr-navbar .btn-primary:hover {
+  background: var(--zhr-green-light);
+  border-color: var(--zhr-green-light);
+}
+
+/* Odstępy przycisków */
+.zhr-navbar .d-flex.gap-2 {
+  gap: 0.5rem !important;
+}
+
+/* Mobile sheet */
+.navbar-mobile-sheet .offcanvas {
+  background: #fff;
+}
+.navbar-mobile-sheet .offcanvas-title {
+  color: var(--zhr-green);
+  font-weight: bold;
+}
+.navbar-mobile-sheet .nav-link {
+  font-weight: 500;
+  color: var(--zhr-dark);
+  border-radius: 6px;
+  padding: 8px 14px;
+  transition: background 0.18s, color 0.18s;
+}
+.navbar-mobile-sheet .nav-link:hover {
+  background: var(--zhr-accent);
+  color: var(--zhr-green);
+}
+
+/* Ukryj domyślną strzałkę Bootstrapa */
+.zhr-navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Zmniejsz gap między elementami menu */
+.zhr-navbar .navbar-nav.gap-1,
+.zhr-navbar .navbar-nav.gap-2,
+.zhr-navbar .navbar-nav {
+  gap: 0.1rem !important;
+}
+
+/* Zmniejsz padding w linkach menu */
+.zhr-navbar .navbar-nav .nav-link,
+.zhr-navbar .navbar-nav .dropdown-toggle {
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 0.05rem;
+}
+
+/* Zablokuj łamanie tekstu w linkach menu */
+.zhr-navbar .navbar-nav .nav-link,
+.zhr-navbar .navbar-nav .dropdown-toggle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 180px; /* lub więcej, jeśli potrzeba */
+}
+
+/* Przycisk "Zaloguj się" - tekst zawsze w jednej linii */
+.zhr-navbar .btn-primary {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 180px; /* lub więcej, jeśli potrzeba */
+}

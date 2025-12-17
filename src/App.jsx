@@ -2,16 +2,20 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
-import Navigation from "./Navigation";
 
-// Strony
-function Home() { return <h2>Strona główna</h2>; }
-function About() { return <h2>O Okręgu</h2>; }
+import './App.css';
+import Navigation from "./components/navbar/Navigation.jsx";
+import Footer from "./components/footer/Footer.jsx";
+
+// Pages
+import Home from "./pages/HomePage";
+import About from "./pages/AboutPage";
+import Login  from "./pages/LoginPage.jsx";
+
 function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
 function AboutZHR() { return <h2>O ZHR</h2>; }
-function MaleBanner() { return <h2>Chorągiew Męska</h2>; }
-function FemaleBanner() { return <h2>Chorągiew Żeńska</h2>; }
+function MaleBanner() { return <h2>Chorągiew Harcerzy</h2>; }
+function FemaleBanner() { return <h2>Chorągiew Harcerek</h2>; }
 function Troops() { return <h2>Szczepy</h2>; }
 function Obwod() { return <h2>Ostrzeszowski Obwód ZHR</h2>; }
 function FindUnit() { return <h2>Znajdź jednostkę</h2>; }
@@ -30,19 +34,9 @@ function RealEstatePomorska() { return <h2>Rezerwacje Pomorskiej</h2>; }
 function RealEstateZatoka() { return <h2>Zatoka</h2>; }
 function Contact() { return <h2>Kontakt</h2>; }
 function OneAndHalfPercent() { return <h2>1,5%</h2>; }
-function Login() { return <h2>Zaloguj się</h2>; }
 function NotFound() { return <h2>404 - Nie znaleziono strony</h2>; }
 
-// Footer
-function Footer() {
-  return (
-    <footer className="text-center py-4 mt-5 border-top" style={{background: "#f8f9fa"}}>
-      <small>
-        &copy; {new Date().getFullYear()} Okręg Dolnośląski ZHR. Wszelkie prawa zastrzeżone.
-      </small>
-    </footer>
-  );
-}
+
 
 function App() {
   return (
@@ -55,8 +49,8 @@ function App() {
             <Route path="/o-nas" element={<About />} />
             <Route path="/o-nas/wladze" element={<Authorities />} />
             <Route path="/o-nas/zhr" element={<AboutZHR />} />
-            <Route path="/jednostki/choragiew-meska" element={<MaleBanner />} />
-            <Route path="/jednostki/choragiew-zenska" element={<FemaleBanner />} />
+            <Route path="/jednostki/choragiew-harcerzy" element={<MaleBanner />} />
+            <Route path="/jednostki/choragiew-harcerek" element={<FemaleBanner />} />
             <Route path="/jednostki/szczepy" element={<Troops />} />
             <Route path="/jednostki/obwod" element={<Obwod />} />
             <Route path="/znajdz-jednostke" element={<FindUnit />} />
