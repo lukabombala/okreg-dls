@@ -73,15 +73,19 @@
   font-weight: bold;
   color: var(--zhr-dark) !important;
   letter-spacing: 0.01em;
-  font-size: 0.97rem;
-  margin-right: 0.2rem;
+  font-size: 0.89rem;
+  margin-right: 0.05rem;
   transition: color 0.2s, background 0.2s;
   border-radius: 0;
-  padding: 7px 10px;
+  padding: 5px 5px;
   background: none !important;
   border: none !important;
   box-shadow: none !important;
   outline: none !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 140px;
 }
 
 .zhr-navbar .navbar-nav .nav-link:hover,
@@ -120,8 +124,8 @@
 .navbar-dropdown-item {
   transition: background 0.18s, color 0.18s;
   border-radius: 0;
-  padding: 10px 18px;
-  font-size: 0.97rem;
+  padding: 8px 14px;
+  font-size: 0.89rem;
   color: var(--zhr-dark);
   background: transparent;
   border: none;
@@ -141,10 +145,10 @@
   font-weight: bold;
   background: #fff;
   border-radius: 8px;
-  padding: 4px 18px !important;
-  font-size: 0.97rem;
+  padding: 4px 14px !important;
+  font-size: 0.89rem;
   line-height: 1.2;
-  min-height: 36px;
+  min-height: 32px;
   height: auto;
   display: flex;
   align-items: center;
@@ -163,16 +167,20 @@
   border-color: var(--zhr-green);
   font-weight: bold;
   border-radius: 8px;
-  padding: 4px 18px !important;
-  font-size: 0.97rem;
+  padding: 4px 14px !important;
+  font-size: 0.89rem;
   line-height: 1.2;
-  min-height: 36px;
+  min-height: 32px;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background 0.18s, color 0.18s;
   box-sizing: border-box;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 140px;
 }
 .zhr-navbar .btn-primary:hover {
   background: var(--zhr-green-light);
@@ -181,7 +189,7 @@
 
 /* Odstępy przycisków */
 .zhr-navbar .d-flex.gap-2 {
-  gap: 0.5rem !important;
+  gap: 0.4rem !important;
 }
 
 /* Mobile sheet */
@@ -196,7 +204,7 @@
   font-weight: 500;
   color: var(--zhr-dark);
   border-radius: 6px;
-  padding: 8px 14px;
+  padding: 7px 12px;
   transition: background 0.18s, color 0.18s;
 }
 .navbar-mobile-sheet .nav-link:hover {
@@ -213,32 +221,14 @@
 .zhr-navbar .navbar-nav.gap-1,
 .zhr-navbar .navbar-nav.gap-2,
 .zhr-navbar .navbar-nav {
-  gap: 0.1rem !important;
+  gap: 0.08rem !important;
 }
 
-/* Zmniejsz padding w linkach menu */
-.zhr-navbar .navbar-nav .nav-link,
-.zhr-navbar .navbar-nav .dropdown-toggle {
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-right: 0.05rem;
+/* Ikona domku - wyrównanie do linii */
+.zhr-navbar .navbar-nav .nav-link .lucide-home {
+  position: relative;
+  top: -2px;
 }
 
-/* Zablokuj łamanie tekstu w linkach menu */
-.zhr-navbar .navbar-nav .nav-link,
-.zhr-navbar .navbar-nav .dropdown-toggle {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 180px; /* lub więcej, jeśli potrzeba */
-}
-
-/* Przycisk "Zaloguj się" - tekst zawsze w jednej linii */
-.zhr-navbar .btn-primary {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 180px; /* lub więcej, jeśli potrzeba */
-}
+/* Obrazki z object-fit */
+.object-fit-cover { object-fit: cover; }
