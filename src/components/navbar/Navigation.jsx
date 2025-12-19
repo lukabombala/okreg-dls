@@ -84,7 +84,7 @@ export default function Navigation() {
           <Navbar.Collapse id="main-navbar" className="d-none d-lg-flex">
             <Nav className="me-auto align-items-center gap-1">
               <Nav.Link as={Link} to="/" className="fw-bold" aria-label="Strona główna">
-                <Home size={20} />
+                <Home size={22} style={{ position: "relative", top: "-1px" }} />
               </Nav.Link>
               {menus.map(menu => (
                 <NavbarMenu
