@@ -33,6 +33,27 @@ export default function Home() {
       date: "20 października 2024",
       category: "Okręg",
     },
+    {
+      id: 4,
+      title: "Nowy Szczep w Legnicy",
+      description: "W Legnicy powstał nowy szczep harcerski! Gratulujemy i życzymy powodzenia.",
+      date: "10 października 2024",
+      category: "Jednostki",
+    },
+    {
+      id: 5,
+      title: "Warsztaty dla Kadry",
+      description: "Zapraszamy kadrę na warsztaty z pracy z młodzieżą. Liczba miejsc ograniczona.",
+      date: "5 października 2024",
+      category: "Szkolenia",
+    },
+    {
+      id: 6,
+      title: "Zakończenie Sezonu Letniego",
+      description: "Podsumowaliśmy sezon letni podczas wspólnego ogniska. Dziękujemy za obecność!",
+      date: "30 września 2024",
+      category: "Wydarzenia",
+    },
   ];
 
   return (
@@ -88,8 +109,103 @@ export default function Home() {
         </div>
       </section>
 
+      {/* News Section */}
+      <section className="py-5">
+        <Container>
+          <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 gap-2">
+            <div>
+              <h2 className="mb-1">Ostatnie Aktualności</h2>
+              <div className="text-muted">Zobacz co się dzieje w naszym okręgu</div>
+            </div>
+          </div>
+          <Row className="g-4">
+            {news.map((item) => (
+              <Col xs={12} md={6} lg={4} key={item.id}>
+                <Card
+                  className="h-100 border-0"
+                  style={{
+                    borderRadius: "16px",
+                    background: "#fff",
+                    boxShadow: "0 0 0 rgba(0,0,0,0)",
+                    transition: "box-shadow 0.2s",
+                  }}
+                  onMouseOver={e => e.currentTarget.style.boxShadow = "0 4px 24px 0 rgba(45,80,22,0.08)"}
+                  onMouseOut={e => e.currentTarget.style.boxShadow = "0 0 0 rgba(0,0,0,0)"}
+                >
+                  <Card.Body>
+                    <div className="d-flex align-items-center gap-2 mb-2">
+                      <span
+                        style={{
+                          background: "#e8f0e3",
+                          color: "#2d5016",
+                          borderRadius: "8px",
+                          fontSize: "0.95em",
+                          padding: "2px 10px",
+                          fontWeight: 600,
+                        }}
+                      >
+                        {item.category}
+                      </span>
+                      <span className="text-muted small">{item.date}</span>
+                    </div>
+                    <h5 className="mb-1">{item.title}</h5>
+                    <div className="text-muted mb-3" style={{ fontSize: "0.97rem" }}>
+                      {item.description}
+                    </div>
+                    <Button
+                      as={Link}
+                      to={`/aktualnosci/${item.id}`}
+                      variant="link"
+                      className="p-0 align-items-center"
+                      style={{
+                        color: "#2d5016",
+                        fontWeight: 600,
+                        textDecoration: "none",
+                        fontSize: "1.05em",
+                      }}
+                    >
+                      Czytaj więcej
+                      <ArrowRight className="ms-2" size={16} />
+                    </Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+          <div className="text-center mt-4">
+            <Button
+              as={Link}
+              to="/aktualnosci"
+              style={{
+                background: "#2d5016",
+                color: "#fff",
+                border: "none",
+                borderRadius: "8px",
+                padding: "10px 28px",
+                fontWeight: 600,
+              }}
+              className="align-items-center"
+            >
+              Zobacz wszystkie aktualności
+              <ArrowRight className="ms-2" size={18} />
+            </Button>
+          </div>
+        </Container>
+      </section>
+
       {/* Stats Section */}
-      <section className="py-5" style={{background: "var(--secondary, #f0f4ed)"}}>
+      <section
+        className="py-5"
+        style={{
+          background: "var(--secondary, #f0f4ed)",
+          width: "100vw",
+          left: "50%",
+          right: "50%",
+          marginLeft: "-50vw",
+          marginRight: "-50vw",
+          position: "relative",
+        }}
+      >
         <Container>
           <h2 className="text-center mb-4">Okręg w Liczbach</h2>
           <Row className="g-4 justify-content-center">
@@ -115,51 +231,22 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* News Section */}
-      <section className="py-5">
-        <Container>
-          <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 gap-2">
-            <div>
-              <h2 className="mb-1">Ostatnie Aktualności</h2>
-              <div className="text-muted">Zobacz co się dzieje w naszym okręgu</div>
-            </div>
-            <Button as={Link} to="/aktualnosci" variant="outline-light" className="d-none d-sm-inline-flex align-items-center">
-              Zobacz wszystkie aktualności
-              <ArrowRight className="ms-2" size={18} />
-            </Button>
-          </div>
-          <Row className="g-4">
-            {news.map((item) => (
-              <Col xs={12} md={6} lg={4} key={item.id}>
-                <Card className="h-100 border-0 shadow-sm">
-                  <Card.Body>
-                    <div className="d-flex align-items-center gap-2 mb-2">
-                      <Badge bg="secondary" className="text-dark">{item.category}</Badge>
-                      <span className="text-muted small">{item.date}</span>
-                    </div>
-                    <h5 className="mb-1">{item.title}</h5>
-                    <div className="text-muted mb-3" style={{fontSize: "0.97rem"}}>{item.description}</div>
-                    <Button as={Link} to={`/aktualnosci/${item.id}`} variant="link" className="p-0 align-items-center">
-                      Czytaj więcej
-                      <ArrowRight className="ms-2" size={16} />
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-          <div className="text-center mt-4">
-            <Button as={Link} to="/aktualnosci" variant="primary" className="align-items-center">
-              Zobacz wszystkie aktualności
-              <ArrowRight className="ms-2" size={18} />
-            </Button>
-          </div>
-        </Container>
-      </section>
 
       {/* CTA Section */}
-      <section className="py-5" style={{background: "var(--primary, #2d5016)", color: "var(--primary-foreground, #fff)"}}>
-        <Container className="text-center">
+      <section
+        className="py-5 d-flex align-items-center justify-content-center"
+        style={{
+          background: "var(--primary, #2d5016)",
+          color: "var(--primary-foreground, #fff)",
+          width: "100vw",
+          left: "50%",
+          right: "50%",
+          marginLeft: "-50vw",
+          marginRight: "-50vw",
+          position: "relative",
+        }}
+      >
+        <div className="w-100 text-center" style={{zIndex: 3}}>
           <h2 className="mb-3">Dołącz do nas!</h2>
           <p className="mb-4 mx-auto" style={{maxWidth: 600, opacity: 0.95}}>
             Szukasz miejsca, gdzie możesz rozwijać swoje pasje, poznać wspaniałych ludzi i doświadczyć niezapomnianych przygód? ZHR czeka na Ciebie!
@@ -173,7 +260,7 @@ export default function Home() {
               Informacje dla rodziców
             </Button>
           </div>
-        </Container>
+        </div>
       </section>
 
       {/* Quick Links */}
