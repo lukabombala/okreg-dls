@@ -43,7 +43,7 @@ function App() {
     <Router>
       <div className="d-flex flex-column min-vh-100">
         <Navigation />
-        <Container className="flex-grow-1 mt-4">
+        <Container className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/o-nas" element={<About />} />
