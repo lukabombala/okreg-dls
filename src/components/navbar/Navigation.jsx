@@ -16,6 +16,7 @@ const aboutItems = [
   { title: "O Okręgu", href: "/o-nas" },
   { title: "Władze (Zarząd i KRO)", href: "/o-nas/wladze" },
   { title: "O ZHR", href: "/o-nas/zhr" },
+  { title: "Ochrona Ludności i Obrona Cywilna", href: "/o-nas/ochrona-ludnosci" },
 ];
 const unitsItems = [
   { title: "Chorągiew Harcerzy", href: "/jednostki/choragiew-harcerzy" },

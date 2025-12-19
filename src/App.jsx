@@ -14,6 +14,7 @@ import Login  from "./pages/LoginPage.jsx";
 
 function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
 function AboutZHR() { return <h2>O ZHR</h2>; }
+function CivilProtection() { return <h2>Ochrona Ludności i Obrona Cywilna</h2>; }
 function MaleBanner() { return <h2>Chorągiew Harcerzy</h2>; }
 function FemaleBanner() { return <h2>Chorągiew Harcerek</h2>; }
 function Troops() { return <h2>Szczepy</h2>; }
@@ -49,6 +50,7 @@ function App() {
             <Route path="/o-nas" element={<About />} />
             <Route path="/o-nas/wladze" element={<Authorities />} />
             <Route path="/o-nas/zhr" element={<AboutZHR />} />
+            <Route path="/o-nas/ochrona-ludnosci" element={<CivilProtection />} />
             <Route path="/jednostki/choragiew-harcerzy" element={<MaleBanner />} />
             <Route path="/jednostki/choragiew-harcerek" element={<FemaleBanner />} />
             <Route path="/jednostki/szczepy" element={<Troops />} />
