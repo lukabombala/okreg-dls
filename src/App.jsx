@@ -11,6 +11,7 @@ import Footer from "./components/footer/Footer.jsx";
 import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import AboutDistrictPage from "./pages/AboutDistrictPage.jsx";
+import CivilProtectionPage from "./pages/CivilProtectionPage.jsx";
 import Login  from "./pages/LoginPage.jsx";
 import ParentsPage from "./pages/ParentsPage.jsx";
 import AuthoritiesPage from "./pages/AuthoritiesPage.jsx";
@@ -19,7 +20,7 @@ import "./authorities.css";
 
 function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
 // function AboutZHR() { return <h2>O ZHR</h2>; }
-function CivilProtection() { return <h2>Ochrona Ludności i Obrona Cywilna</h2>; }
+// function CivilProtection() { return <h2>Ochrona Ludności i Obrona Cywilna</h2>; }
 function MaleBanner() { return <h2>Chorągiew Harcerzy</h2>; }
 function FemaleBanner() { return <h2>Chorągiew Harcerek</h2>; }
 function Troops() { return <h2>Szczepy</h2>; }
@@ -56,7 +57,7 @@ function App() {
             <Route path="/o-nas" element={<AboutDistrictPage />} />
             <Route path="/o-nas/wladze" element={<AuthoritiesPage />} />
             <Route path="/o-nas/zhr" element={<AboutZHRPage />} />
-            <Route path="/o-nas/ochrona-ludnosci" element={<CivilProtection />} />
+            <Route path="/o-nas/ochrona-ludnosci" element={<CivilProtectionPage />} />
             <Route path="/jednostki/choragiew-harcerzy" element={<MaleBanner />} />
             <Route path="/jednostki/choragiew-harcerek" element={<FemaleBanner />} />
             <Route path="/jednostki/szczepy" element={<Troops />} />
