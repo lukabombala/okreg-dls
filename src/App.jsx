@@ -12,6 +12,8 @@ import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import Login  from "./pages/LoginPage.jsx";
 import ParentsPage from "./pages/ParentsPage.jsx";
+import AuthoritiesPage from "./pages/AuthoritiesPage.jsx";
+import "./authorities.css";
 
 function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
 function AboutZHR() { return <h2>O ZHR</h2>; }
@@ -50,7 +52,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/o-nas" element={<About />} />
-            <Route path="/o-nas/wladze" element={<Authorities />} />
+            <Route path="/o-nas/wladze" element={<AuthoritiesPage />} />
             <Route path="/o-nas/zhr" element={<AboutZHR />} />
             <Route path="/o-nas/ochrona-ludnosci" element={<CivilProtection />} />
             <Route path="/jednostki/choragiew-harcerzy" element={<MaleBanner />} />
