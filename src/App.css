@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
+:root {
+  --background-primary: #1A1423;
+  --background-secondary: #fff;
+  --primary: #FAC525;
+  --text-primary: #fff;
+}
+
 body, html {
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background-primary) !important;
+  color: var(--text-primary);
 }
 
 .zhr-navbar {
@@ -200,3 +212,35 @@ body, html {
 }
 
 .object-fit-cover { object-fit: cover; }
+
+.main-bg {
+  background: var(--background-primary) !important;
+}
+
+.secondary-bg, .subsection-bg {
+  background: var(--background-secondary) !important;
+  color: var(--background-primary);
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--background-primary) !important;
+}
+
+/* Dla sekcji podrzędnych, np. Container, Card, itp. */
+.card, .container, .section-secondary {
+  background: var(--background-secondary) !important;
+  color: var(--background-primary);
+}
+
+/* Dla sekcji głównych, np. hero */
+.section-main {
+  background: var(--background-primary) !important;
+  color: var(--text-primary);
+}
+
+/* Domyślny kolor tekstu na biały wszędzie */
+* {
+  color: var(--text-primary);
+}

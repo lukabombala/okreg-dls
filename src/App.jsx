@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import Navigation from "./components/navbar/Navigation.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import PageHeader from "./components/PageHeader.jsx";
 
 // Pages
 import Home from "./pages/HomePage";
@@ -54,40 +55,46 @@ import ContactPage from "./pages/ContactPage.jsx";
 function OneAndHalfPercent() { return <h2>1,5%</h2>; }
 function NotFound() { return <h2>404 - Nie znaleziono strony</h2>; }
 
-
-
+function withHeader(Component, title) {
+  return function Wrapped(props) {
+    return <>
+      <PageHeader title={title} />
+      <Component {...props} />
+    </>;
+  };
+}
 
 function App() {
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
         <Navigation />
-        <Container className="flex-grow-1">
+        <Container className="flex-grow-1" style={{ background: 'var(--background-primary)' }}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/o-nas" element={<AboutDistrictPage />} />
-            <Route path="/o-nas/wladze" element={<AuthoritiesPage />} />
-            <Route path="/o-nas/zhr" element={<AboutZHRPage />} />
-            <Route path="/o-nas/ochrona-ludnosci" element={<CivilProtectionPage />} />
-            <Route path="/jednostki/choragiew-harcerzy" element={<MaleBanner />} />
-            <Route path="/jednostki/choragiew-harcerek" element={<FemaleBanner />} />
-            <Route path="/jednostki/szczepy" element={<TroopsPage />} />
-            <Route path="/jednostki/obwod" element={<Obwod />} />
-            <Route path="/znajdz-jednostke" element={<FindUnitPage />} />
-            <Route path="/dla-rodzicow" element={<ParentsPage />} />
-            <Route path="/dla-rodzicow/bezpieczenstwo" element={<SafeZHRPage />} />
-            <Route path="/dla-rodzicow/metoda" element={<ScoutMethodPage />} />
-            <Route path="/dla-rodzicow/skladki" element={<FeesInsurancePage />} />
-            <Route path="/dla-rodzicow/faktura" element={<InvoicePage />} />
-            <Route path="/dla-mediow" element={<MediaPage />} />
-            <Route path="/hopr" element={<HoprNewsPage />} />
-            <Route path="/hopr/info" element={<HoprInfoPage />} />
-            <Route path="/hopr/szkolenia" element={<HoprTrainingsPage />} />
-            <Route path="/nieruchomosci" element={<PropertiesPage />} />
-            <Route path="/kontakt" element={<ContactPage />} />
-            <Route path="/1-5-procent" element={<OneAndHalfPercent />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<><PageHeader title="Strona główna" /><Home /></>} />
+            <Route path="/o-nas" element={withHeader(AboutDistrictPage, "O Okręgu")()} />
+            <Route path="/o-nas/wladze" element={withHeader(AuthoritiesPage, "Władze (Zarząd i KRO)")()} />
+            <Route path="/o-nas/zhr" element={withHeader(AboutZHRPage, "O ZHR")()} />
+            <Route path="/o-nas/ochrona-ludnosci" element={withHeader(CivilProtectionPage, "Ochrona Ludności i Obrona Cywilna")()} />
+            <Route path="/jednostki/choragiew-harcerzy" element={withHeader(MaleBanner, "Chorągiew Harcerzy")()} />
+            <Route path="/jednostki/choragiew-harcerek" element={withHeader(FemaleBanner, "Chorągiew Harcerek")()} />
+            <Route path="/jednostki/szczepy" element={withHeader(TroopsPage, "Szczepy")()} />
+            <Route path="/jednostki/obwod" element={withHeader(Obwod, "Ostrzeszowski Obwód ZHR")()} />
+            <Route path="/znajdz-jednostke" element={withHeader(FindUnitPage, "Znajdź jednostkę")()} />
+            <Route path="/dla-rodzicow" element={withHeader(ParentsPage, "Informacje dla rodziców")()} />
+            <Route path="/dla-rodzicow/bezpieczenstwo" element={withHeader(SafeZHRPage, "Bezpieczny ZHR")()} />
+            <Route path="/dla-rodzicow/metoda" element={withHeader(ScoutMethodPage, "Metoda Harcerska")()} />
+            <Route path="/dla-rodzicow/skladki" element={withHeader(FeesInsurancePage, "Składki / ubezpieczenie")()} />
+            <Route path="/dla-rodzicow/faktura" element={withHeader(InvoicePage, "Faktura za obóz/kolonię/zimowisko")()} />
+            <Route path="/dla-mediow" element={withHeader(MediaPage, "Dla mediów")()} />
+            <Route path="/hopr" element={withHeader(HoprNewsPage, "HOPR Aktualności")()} />
+            <Route path="/hopr/info" element={withHeader(HoprInfoPage, "HOPR Ogólne Informacje")()} />
+            <Route path="/hopr/szkolenia" element={withHeader(HoprTrainingsPage, "HOPR Najbliższe Szkolenia")()} />
+            <Route path="/nieruchomosci" element={withHeader(PropertiesPage, "Nieruchomości")()} />
+            <Route path="/kontakt" element={withHeader(ContactPage, "Kontakt")()} />
+            <Route path="/1-5-procent" element={withHeader(OneAndHalfPercent, "1,5%")()} />
+            <Route path="/login" element={withHeader(Login, "Logowanie")()} />
+            <Route path="*" element={withHeader(NotFound, "404 - Nie znaleziono strony")()} />
           </Routes>
         </Container>
         <Footer />

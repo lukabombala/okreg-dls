@@ -162,29 +162,19 @@
 }
 
 /* Przycisk Zaloguj się */
-.zhr-navbar .btn-primary {
-  background: var(--zhr-green);
-  border-color: var(--zhr-green);
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 4px 14px !important;
-  font-size: 0.89rem;
-  line-height: 1.2;
-  min-height: 32px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.18s, color 0.18s;
-  box-sizing: border-box;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 140px;
+.navbar .btn-primary, .navbar .btn-primary:active, .navbar .btn-primary:focus {
+  background: #FAC525 !important;
+  border-color: #FAC525 !important;
+  color: #1A1423 !important;
 }
-.zhr-navbar .btn-primary:hover {
-  background: var(--zhr-green-light);
-  border-color: var(--zhr-green-light);
+.navbar .btn-primary:hover {
+  background: #e6b800 !important;
+  border-color: #e6b800 !important;
+  color: #1A1423 !important;
+}
+.navbar .btn-primary svg {
+  color: #1A1423 !important;
+  fill: #1A1423 !important;
 }
 
 /* Odstępy przycisków */
@@ -232,3 +222,63 @@
 
 /* Obrazki z object-fit */
 .object-fit-cover { object-fit: cover; }
+
+/* Kolor tekstu w navbarze */
+.navbar, .navbar *, .navbar a, .navbar-brand, .nav-link, .navbar-nav, .dropdown-item,
+.navbar-nav .nav-link, .navbar-nav a, .nav-item, .nav-link.active, .nav-link:visited, .nav-link:focus, .nav-link:active, .navbar-nav .nav-item .nav-link, .navbar-nav .nav-item a,
+.navbar a,
+.navbar .nav-link,
+.navbar .nav-link.fw-bold,
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-nav a,
+.navbar .nav-item .nav-link,
+.navbar .nav-item a,
+.navbar .dropdown-item,
+.navbar .fw-bold,
+.navbar a:visited,
+.navbar a:active,
+.navbar a:focus,
+.navbar a:hover,
+.navbar .nav-link:visited,
+.navbar .nav-link:active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: var(--text-primary) !important;
+}
+
+/* Rekurencyjne białe tło dla podrzędnych elementów */
+.container, .content, .card, .section-secondary, .subsection-bg, .secondary-bg {
+  background: #fff !important;
+  color: #1A1423 !important;
+}
+
+/* Tło navbar */
+.zhr-navbar {
+  background: #1A1423 !important;
+  color: #fff !important;
+}
+
+/* Kolor tekstu w rozwijanym menu (dropdown) */
+.dropdown-menu,
+.dropdown-menu.show,
+.dropdown-menu .dropdown-item,
+.dropdown-menu.show .dropdown-item,
+.navbar .dropdown-menu .dropdown-item {
+  color: #1A1423 !important;
+  background: #fff !important;
+}
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active,
+.dropdown-menu.show .dropdown-item:hover,
+.dropdown-menu.show .dropdown-item:focus,
+.dropdown-menu.show .dropdown-item:active {
+  color: #FAC525 !important;
+  background: #fff !important;
+}
+
+.d-flex.flex-column > .container.flex-grow-1,
+.min-vh-100 > .container.flex-grow-1 {
+  background: var(--background-primary) !important;
+  color: var(--text-primary) !important;
+}

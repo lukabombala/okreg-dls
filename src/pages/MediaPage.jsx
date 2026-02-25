@@ -62,18 +62,18 @@ function Accordion({ items }) {
 export default function MediaPage() {
   return (
     <div className="authorities-container" style={{maxWidth: 1100, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 18}}>Dla mediów</h1>
       <div style={{marginBottom: 24, fontSize: '1.08rem', lineHeight: 1.7}}>
-        Na poniższej stronie znajdą Państwo wszelkie materiały dla mediów. W przypadku braku pożądanego elementu prosimy o kontakt na rzecznik.dls@zhr.pl.
+        Na poniższej stronie znajdą Państwo wszelkie materiały dla mediów. W przypadku braku pożądanego elementu prosimy o kontakt na <span style={{color: 'var(--primary)', fontWeight: 600}}>rzecznik.dls@zhr.pl</span>.
       </div>
-      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: '#31491d'}}>Kontakt dla mediów oraz aktualności/Social Media</h2>
+      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Kontakt dla mediów oraz aktualności/Social Media</h2>
       <div style={{marginBottom: 18, fontSize: '1.07rem', lineHeight: 1.7}}>
         Rzecznik Prasowy Okręgu: pwd. Wiktor Litwin HO<br/>
-        e-mail: <a href="mailto:rzecznik.dls@zhr.pl" style={{color: '#466c2b', fontWeight: 600}}>rzecznik.dls@zhr.pl</a><br/>
+        e-mail: <a href="mailto:rzecznik.dls@zhr.pl" style={{color: 'var(--primary)', fontWeight: 600}}>rzecznik.dls@zhr.pl</a><br/>
         tel.: 730 407 770 (w przypadku nieodbierania, proszę zostawić SMS)<br/>
-        Informacje o nadchodzących wydarzeniach oraz relacje z przebytych publikujemy na stronie Facebook: <a href="https://www.facebook.com/zhr.dolnyslask" target="_blank" rel="noopener noreferrer" style={{color: '#466c2b', fontWeight: 600}}>https://www.facebook.com/zhr.dolnyslask</a>
+        Informacje o nadchodzących wydarzeniach oraz relacje z przebytych publikujemy na stronie Facebook: 
+        <br /><a href="https://www.facebook.com/zhr.dolnyslask" target="_blank" rel="noopener noreferrer" style={{color: 'var(--primary)', fontWeight: 600}}>https://www.facebook.com/zhr.dolnyslask</a>
       </div>
-      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: '#31491d'}}>Press Kit</h2>
+      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Press Kit</h2>
       <div style={{marginBottom: 18, fontSize: '1.07rem', lineHeight: 1.7}}>
         Okręg Dolnośląski jest terenową jednostką Związku Harcerstwa Rzeczypospolitej. Skupia i koordynuje działalność gromad zuchowych, drużyn harcerek i harcerzy, środowisk wędrowniczych oraz kręgów harcerstwa starszego działających na obszarze województwa dolnośląskiego. Tworzy wspólnotę wychowawczą opartą o metodę harcerską i służbę podejmowaną lokalnie – w szkołach, parafiach i społecznościach naszych miast i miejscowości.
         <br/><br/>
@@ -87,19 +87,19 @@ export default function MediaPage() {
               <strong>{p.name}</strong>
               <div>{p.role}</div>
               <div style={{fontSize: '0.97em', marginTop: 4}}>
-                <a href={`mailto:${p.email}`} style={{color: '#466c2b', fontWeight: 600}}>{p.email}</a>
+                <a href={`mailto:${p.email}`} style={{color: 'var(--primary)', fontWeight: 600}}>{p.email}</a>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: '#31491d'}}>Materiały do pobrania - logo, zdjęcia</h2>
+      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Materiały do pobrania - logo, zdjęcia</h2>
       <div style={{marginBottom: 18, fontSize: '1.07rem', lineHeight: 1.7}}>
         Link do dysku Google z logo ZHR, logo okręgu, zdjęciami do wykorzystania oraz innymi materiałami:<br/>
-        <a href="https://drive.google.com/placeholder-link" target="_blank" rel="noopener noreferrer" style={{color: '#466c2b', fontWeight: 600}}>https://drive.google.com/placeholder-link</a><br/>
+        <a href="https://drive.google.com/placeholder-link" target="_blank" rel="noopener noreferrer" style={{color: 'var(--primary)', fontWeight: 600}}>https://drive.google.com/placeholder-link</a><br/>
         Zdjęcia mogą być bezpłatnie wykorzystywane przez media z dopiskiem: „Fot. Archiwum ZHR Dolny Śląsk”.
       </div>
-      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: '#31491d'}}>Harcerskie FAQ</h2>
+      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Harcerskie FAQ</h2>
      
   <div style={{marginBottom: 18, fontSize: '1.07rem', lineHeight: 1.7}}>Odpowiadamy na najczęstsze pytania odnośnie ZHR i harcerstwa:</div>      
   <Accordion
