@@ -28,7 +28,8 @@ import TroopsPage from "./pages/TroopsPage.jsx";
 // function Troops() { return <h2>Szczepy</h2>; }
 function Obwod() { return <h2>Ostrzeszowski Obwód ZHR</h2>; }
 // function FindUnit() { return <h2>Znajdź jednostkę</h2>; }
-function ParentsSafety() { return <h2>Bezpieczny ZHR</h2>; }
+import SafeZHRPage from "./pages/SafeZHRPage.jsx";
+// function ParentsSafety() { return <h2>Bezpieczny ZHR</h2>; }
 import ScoutMethodPage from "./pages/ScoutMethodPage.jsx";
 // function ParentsMethod() { return <h2>Metoda Harcerska</h2>; }
 import FeesInsurancePage from "./pages/FeesInsurancePage.jsx";
@@ -67,7 +68,7 @@ function App() {
             <Route path="/jednostki/obwod" element={<Obwod />} />
             <Route path="/znajdz-jednostke" element={<FindUnitPage />} />
             <Route path="/dla-rodzicow" element={<ParentsPage />} />
-            <Route path="/dla-rodzicow/bezpieczenstwo" element={<ParentsSafety />} />
+            <Route path="/dla-rodzicow/bezpieczenstwo" element={<SafeZHRPage />} />
             <Route path="/dla-rodzicow/metoda" element={<ScoutMethodPage />} />
             <Route path="/dla-rodzicow/skladki" element={<FeesInsurancePage />} />
             <Route path="/dla-rodzicow/faktura" element={<ParentsInvoice />} />
