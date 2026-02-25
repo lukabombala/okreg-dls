@@ -38,7 +38,8 @@ import InvoicePage from "./pages/InvoicePage.jsx";
 // function ParentsInvoice() { return <h2>Faktura za obóz/kolonię/zimowisko</h2>; }
 function Media() { return <h2>Dla Mediów</h2>; }
 function HoprNews() { return <h2>HOPR Aktualności</h2>; }
-function HoprInfo() { return <h2>HOPR Ogólne Informacje</h2>; }
+import HoprInfoPage from "./pages/HoprInfoPage.jsx";
+// function HoprInfo() { return <h2>HOPR Ogólne Informacje</h2>; }
 function HoprTrainings() { return <h2>HOPR Najbliższe Szkolenia</h2>; }
 function RealEstateInfo() { return <h2>Nieruchomości Informacje</h2>; }
 function RealEstateWinsko() { return <h2>Wińsko</h2>; }
@@ -75,7 +76,7 @@ function App() {
             <Route path="/dla-rodzicow/faktura" element={<InvoicePage />} />
             <Route path="/dla-mediow" element={<Media />} />
             <Route path="/hopr" element={<HoprNews />} />
-            <Route path="/hopr/info" element={<HoprInfo />} />
+            <Route path="/hopr/info" element={<HoprInfoPage />} />
             <Route path="/hopr/szkolenia" element={<HoprTrainings />} />
             <Route path="/nieruchomosci" element={<RealEstateInfo />} />
             <Route path="/nieruchomosci/winsko" element={<RealEstateWinsko />} />
