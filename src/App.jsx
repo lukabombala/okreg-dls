@@ -11,6 +11,7 @@ import Footer from "./components/footer/Footer.jsx";
 import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import Login  from "./pages/LoginPage.jsx";
+import ParentsPage from "./pages/ParentsPage.jsx";
 
 function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
 function AboutZHR() { return <h2>O ZHR</h2>; }
@@ -39,6 +40,7 @@ function NotFound() { return <h2>404 - Nie znaleziono strony</h2>; }
 
 
 
+
 function App() {
   return (
     <Router>
@@ -56,6 +58,7 @@ function App() {
             <Route path="/jednostki/szczepy" element={<Troops />} />
             <Route path="/jednostki/obwod" element={<Obwod />} />
             <Route path="/znajdz-jednostke" element={<FindUnit />} />
+            <Route path="/dla-rodzicow" element={<ParentsPage />} />
             <Route path="/dla-rodzicow/bezpieczenstwo" element={<ParentsSafety />} />
             <Route path="/dla-rodzicow/metoda" element={<ParentsMethod />} />
             <Route path="/dla-rodzicow/skladki" element={<ParentsFees />} />

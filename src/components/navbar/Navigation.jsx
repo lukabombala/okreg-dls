@@ -26,6 +26,7 @@ const unitsItems = [
   { title: "Znajdź jednostkę", href: "/znajdz-jednostke" },
 ];
 const parentsItems = [
+  { title: "Informacje dla rodziców", href: "/dla-rodzicow" },
   { title: "Bezpieczny ZHR", href: "/dla-rodzicow/bezpieczenstwo" },
   { title: "Metoda Harcerska", href: "/dla-rodzicow/metoda" },
   { title: "Składki + Nr kont", href: "/dla-rodzicow/skladki" },
