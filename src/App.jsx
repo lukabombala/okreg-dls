@@ -41,7 +41,8 @@ function Media() { return <h2>Dla Mediów</h2>; }
 function HoprNews() { return <h2>HOPR Aktualności</h2>; }
 import HoprInfoPage from "./pages/HoprInfoPage.jsx";
 // function HoprInfo() { return <h2>HOPR Ogólne Informacje</h2>; }
-function HoprTrainings() { return <h2>HOPR Najbliższe Szkolenia</h2>; }
+import HoprTrainingsPage from "./pages/HoprTrainingsPage.jsx";
+// function HoprTrainings() { return <h2>HOPR Najbliższe Szkolenia</h2>; }
 function RealEstateInfo() { return <h2>Nieruchomości Informacje</h2>; }
 function RealEstateWinsko() { return <h2>Wińsko</h2>; }
 function RealEstatePomorska() { return <h2>Rezerwacje Pomorskiej</h2>; }
@@ -78,7 +79,7 @@ function App() {
             <Route path="/dla-mediow" element={<Media />} />
             <Route path="/hopr" element={<HoprNewsPage />} />
             <Route path="/hopr/info" element={<HoprInfoPage />} />
-            <Route path="/hopr/szkolenia" element={<HoprTrainings />} />
+            <Route path="/hopr/szkolenia" element={<HoprTrainingsPage />} />
             <Route path="/nieruchomosci" element={<RealEstateInfo />} />
             <Route path="/nieruchomosci/winsko" element={<RealEstateWinsko />} />
             <Route path="/nieruchomosci/pomorska" element={<RealEstatePomorska />} />
