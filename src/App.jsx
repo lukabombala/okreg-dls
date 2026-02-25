@@ -30,9 +30,9 @@ function Obwod() { return <h2>Ostrzeszowski Obwód ZHR</h2>; }
 // function FindUnit() { return <h2>Znajdź jednostkę</h2>; }
 function ParentsSafety() { return <h2>Bezpieczny ZHR</h2>; }
 function ParentsMethod() { return <h2>Metoda Harcerska</h2>; }
-function ParentsFees() { return <h2>Składki + Nr kont</h2>; }
+import FeesInsurancePage from "./pages/FeesInsurancePage.jsx";
+// function ParentsFees() { return <h2>Składki + Nr kont</h2>; }
 function ParentsInvoice() { return <h2>Faktura za obóz/kolonię/zimowisko</h2>; }
-function ParentsInsurance() { return <h2>Ubezpieczenie</h2>; }
 function Media() { return <h2>Dla Mediów</h2>; }
 function HoprNews() { return <h2>HOPR Aktualności</h2>; }
 function HoprInfo() { return <h2>HOPR Ogólne Informacje</h2>; }
@@ -68,9 +68,8 @@ function App() {
             <Route path="/dla-rodzicow" element={<ParentsPage />} />
             <Route path="/dla-rodzicow/bezpieczenstwo" element={<ParentsSafety />} />
             <Route path="/dla-rodzicow/metoda" element={<ParentsMethod />} />
-            <Route path="/dla-rodzicow/skladki" element={<ParentsFees />} />
+            <Route path="/dla-rodzicow/skladki" element={<FeesInsurancePage />} />
             <Route path="/dla-rodzicow/faktura" element={<ParentsInvoice />} />
-            <Route path="/dla-rodzicow/ubezpieczenie" element={<ParentsInsurance />} />
             <Route path="/dla-mediow" element={<Media />} />
             <Route path="/hopr" element={<HoprNews />} />
             <Route path="/hopr/info" element={<HoprInfo />} />

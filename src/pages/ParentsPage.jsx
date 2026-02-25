@@ -25,8 +25,8 @@ export default function ParentsPage() {
     },
     {
       icon: DollarSign,
-      title: "Składki + Nr kont",
-      description: "Informacje o składkach członkowskich i opłatach",
+      title: "Składki + Ubezpieczenie",
+      description: "Informacje o składkach członkowskich i ubezpieczeniu",
       href: "/dla-rodzicow/skladki",
       color: "#eab308",
     },
@@ -36,13 +36,6 @@ export default function ParentsPage() {
       description: "Jak otrzymać fakturę za obóz, kolonię lub zimowisko",
       href: "/dla-rodzicow/faktura",
       color: "#a21caf",
-    },
-    {
-      icon: Heart,
-      title: "Ubezpieczenie",
-      description: "Informacje o ubezpieczeniu harcerzy",
-      href: "/dla-rodzicow/ubezpieczenie",
-      color: "#dc2626",
     },
   ];
 

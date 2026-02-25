@@ -29,9 +29,8 @@ const parentsItems = [
   { title: "Informacje dla rodziców", href: "/dla-rodzicow" },
   { title: "Bezpieczny ZHR", href: "/dla-rodzicow/bezpieczenstwo" },
   { title: "Metoda Harcerska", href: "/dla-rodzicow/metoda" },
-  { title: "Składki + Nr kont", href: "/dla-rodzicow/skladki" },
+  { title: "Składki / ubezpieczenie", href: "/dla-rodzicow/skladki" },
   { title: "Faktura za obóz/kolonię/zimowisko", href: "/dla-rodzicow/faktura" },
-  { title: "Ubezpieczenie", href: "/dla-rodzicow/ubezpieczenie" },
 ];
 const realEstateItems = [
   { title: "Informacje", href: "/nieruchomosci" },
