@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer.jsx";
 // Pages
 import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
+import AboutDistrictPage from "./pages/AboutDistrictPage.jsx";
 import Login  from "./pages/LoginPage.jsx";
 import ParentsPage from "./pages/ParentsPage.jsx";
 import AuthoritiesPage from "./pages/AuthoritiesPage.jsx";
@@ -52,7 +53,7 @@ function App() {
         <Container className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/o-nas" element={<About />} />
+            <Route path="/o-nas" element={<AboutDistrictPage />} />
             <Route path="/o-nas/wladze" element={<AuthoritiesPage />} />
             <Route path="/o-nas/zhr" element={<AboutZHRPage />} />
             <Route path="/o-nas/ochrona-ludnosci" element={<CivilProtection />} />
