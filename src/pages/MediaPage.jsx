@@ -99,7 +99,10 @@ export default function MediaPage() {
         <a href="https://drive.google.com/placeholder-link" target="_blank" rel="noopener noreferrer" style={{color: '#466c2b', fontWeight: 600}}>https://drive.google.com/placeholder-link</a><br/>
         Zdjęcia mogą być bezpłatnie wykorzystywane przez media z dopiskiem: „Fot. Archiwum ZHR Dolny Śląsk”.
       </div>
-      <Accordion
+      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: '#31491d'}}>Harcerskie FAQ</h2>
+     
+  <div style={{marginBottom: 18, fontSize: '1.07rem', lineHeight: 1.7}}>Odpowiadamy na najczęstsze pytania odnośnie ZHR i harcerstwa:</div>      
+  <Accordion
         items={[
           {
             title: "Najczęstsze pytania od redakcji (krótkie odpowiedzi)",
