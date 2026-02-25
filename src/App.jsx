@@ -48,7 +48,8 @@ function RealEstateInfo() { return <h2>Nieruchomości Informacje</h2>; }
 function RealEstateWinsko() { return <h2>Wińsko</h2>; }
 function RealEstatePomorska() { return <h2>Rezerwacje Pomorskiej</h2>; }
 function RealEstateZatoka() { return <h2>Zatoka</h2>; }
-function Contact() { return <h2>Kontakt</h2>; }
+import ContactPage from "./pages/ContactPage.jsx";
+// function Contact() { return <h2>Kontakt</h2>; }
 function OneAndHalfPercent() { return <h2>1,5%</h2>; }
 function NotFound() { return <h2>404 - Nie znaleziono strony</h2>; }
 
@@ -85,7 +86,7 @@ function App() {
             <Route path="/nieruchomosci/winsko" element={<RealEstateWinsko />} />
             <Route path="/nieruchomosci/pomorska" element={<RealEstatePomorska />} />
             <Route path="/nieruchomosci/zatoka" element={<RealEstateZatoka />} />
-            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/kontakt" element={<ContactPage />} />
             <Route path="/1-5-procent" element={<OneAndHalfPercent />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
