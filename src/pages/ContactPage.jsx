@@ -6,7 +6,6 @@ import "../authorities.css";
 export default function ContactPage() {
   return (
     <div className="authorities-container" style={{maxWidth: 800, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 18, color: 'var(--primary)'}}>Kontakt</h1>
       <div style={{fontSize: '1.08rem', marginBottom: 32, lineHeight: 1.7}}>
         <div>Związek Harcerstwa Rzeczypospolitej Okręg Dolnośląski</div>
         <div style={{marginTop: 12}}>ul. Pomorska 27/2</div>

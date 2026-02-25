@@ -138,27 +138,16 @@
   color: var(--zhr-green);
 }
 
-/* Przycisk 1,5% */
-.zhr-navbar .btn-outline-primary {
-  border-color: var(--zhr-green);
-  color: var(--zhr-green);
-  font-weight: bold;
-  background: #fff;
-  border-radius: 8px;
-  padding: 4px 14px !important;
-  font-size: 0.89rem;
-  line-height: 1.2;
-  min-height: 32px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.18s, color 0.18s;
-  box-sizing: border-box;
+/* Przycisk 1,5% - czerwony */
+.navbar .btn-outline-primary, .navbar .btn-outline-primary:active, .navbar .btn-outline-primary:focus {
+  background: #d32f2f !important;
+  border-color: #d32f2f !important;
+  color: #fff !important;
 }
-.zhr-navbar .btn-outline-primary:hover {
-  background: var(--zhr-green);
-  color: #fff;
+.navbar .btn-outline-primary:hover {
+  background: #b71c1c !important;
+  border-color: #b71c1c !important;
+  color: #fff !important;
 }
 
 /* Przycisk Zaloguj się */
@@ -167,14 +156,31 @@
   border-color: #FAC525 !important;
   color: #1A1423 !important;
 }
-.navbar .btn-primary:hover {
-  background: #e6b800 !important;
-  border-color: #e6b800 !important;
-  color: #1A1423 !important;
-}
 .navbar .btn-primary svg {
   color: #1A1423 !important;
   fill: #1A1423 !important;
+}
+.navbar .btn-primary,
+.navbar .btn-primary:active,
+.navbar .btn-primary:focus,
+.navbar .btn-primary:hover,
+.navbar .btn-primary:disabled,
+.navbar .btn-primary span,
+.navbar .btn-primary svg,
+.navbar .btn-primary * {
+  color: #1A1423 !important;
+  fill: #1A1423 !important;
+}
+
+.navbar .btn-primary:not(.nav-link),
+.navbar .btn-primary:not(.nav-link) *,
+.navbar .btn-primary:not(.nav-link) span,
+.navbar .btn-primary:not(.nav-link) strong,
+.navbar .btn-primary:not(.nav-link) em,
+.navbar .btn-primary:not(.nav-link) b,
+.navbar .btn-primary:not(.nav-link) p,
+.navbar .btn-primary:not(.nav-link) div {
+  color: #1A1423 !important;
 }
 
 /* Odstępy przycisków */
@@ -281,4 +287,17 @@
 .min-vh-100 > .container.flex-grow-1 {
   background: var(--background-primary) !important;
   color: var(--text-primary) !important;
+}
+
+.navbar .btn-primary:not(.nav-link):hover,
+.navbar .btn-primary:not(.nav-link):focus,
+.navbar .btn-primary:not(.nav-link):active {
+  background: #e6b800 !important;
+  border-color: #e6b800 !important;
+  color: #1A1423 !important;
+}
+.navbar .btn-primary:not(.nav-link):hover *,
+.navbar .btn-primary:not(.nav-link):focus *,
+.navbar .btn-primary:not(.nav-link):active * {
+  color: #1A1423 !important;
 }

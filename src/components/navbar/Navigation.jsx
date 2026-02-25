@@ -5,6 +5,7 @@ import { NavbarMenu } from "./NavbarMenu";
 import { NavbarMobileSheet } from "./NavbarMobileSheet";
 import "./navbar.css";
 import { Home } from "lucide-react"; // Dodaj import ikony domku
+import mainLogo from '../../media/main-logo.jpeg';
 
 // Zdefiniuj wszystkie grupy linków
 const hoprItems = [
@@ -67,7 +68,7 @@ export default function Navigation() {
       <Navbar expand="lg" sticky="top" className="zhr-navbar w-100 p-0" style={{ minHeight: "64px" }}>
         <div className="navbar-inner w-100">
           <Navbar.Brand as={Link} to="/" className="me-4 d-flex align-items-center gap-2">
-            <span className="zhr-logo">ZHR</span>
+            <img src={mainLogo} alt="Logo ZHR" style={{ height: 40, width: 40, objectFit: 'contain', borderRadius: 8 }} />
             <span className="brand-text d-none d-md-flex flex-column">
               <span className="brand-title">Okręg Dolnośląski</span>
               <span className="brand-desc">ZHR</span>
@@ -76,9 +77,6 @@ export default function Navigation() {
           <Navbar.Toggle aria-controls="main-navbar" onClick={() => setShowMobile(true)} />
           <Navbar.Collapse id="main-navbar" className="d-none d-lg-flex">
             <Nav className="me-auto align-items-center gap-1">
-              <Nav.Link as={Link} to="/" className="fw-bold" aria-label="Strona główna">
-                <Home size={22} style={{ position: "relative", top: "-1px" }} />
-              </Nav.Link>
               {menus.map(menu => (
                 <NavbarMenu
                   key={menu.key}
@@ -98,9 +96,9 @@ export default function Navigation() {
             </Nav>
             <div className="d-flex gap-2 ms-3">
               <Button as={Link} to="https://procentnadolnyslask.zhr.pl/" variant="outline-primary">
-                1,5%
+                1,5% Dla ZHR
               </Button>
-              <Button as={Link} to="/login" variant="primary">
+              <Button as={Link} to="/login" variant="primary" style={{ color: '#1A1423', fontWeight: 600 }}>
                 <span className="me-2">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M10.25 4.75a.75.75 0 0 1 .75-.75h6A2.25 2.25 0 0 1 19.25 6.25v11.5A2.25 2.25 0 0 1 17 20H11a.75.75 0 0 1 0-1.5h6A.75.75 0 0 0 17.75 17V6.25A.75.75 0 0 0 17 5.5h-6a.75.75 0 0 1-.75-.75Z"/><path fill="currentColor" d="M15.03 12.53a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H5a.75.75 0 0 0 0 1.5h7.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"/></svg>
                 </span>
