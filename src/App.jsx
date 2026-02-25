@@ -16,6 +16,7 @@ import Login  from "./pages/LoginPage.jsx";
 import ParentsPage from "./pages/ParentsPage.jsx";
 import AuthoritiesPage from "./pages/AuthoritiesPage.jsx";
 import AboutZHRPage from "./pages/AboutZHRPage.jsx";
+import FindUnitPage from "./pages/FindUnitPage.jsx";
 import "./authorities.css";
 
 function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
@@ -25,7 +26,7 @@ function MaleBanner() { return <h2>Chorągiew Harcerzy</h2>; }
 function FemaleBanner() { return <h2>Chorągiew Harcerek</h2>; }
 function Troops() { return <h2>Szczepy</h2>; }
 function Obwod() { return <h2>Ostrzeszowski Obwód ZHR</h2>; }
-function FindUnit() { return <h2>Znajdź jednostkę</h2>; }
+// function FindUnit() { return <h2>Znajdź jednostkę</h2>; }
 function ParentsSafety() { return <h2>Bezpieczny ZHR</h2>; }
 function ParentsMethod() { return <h2>Metoda Harcerska</h2>; }
 function ParentsFees() { return <h2>Składki + Nr kont</h2>; }
@@ -62,7 +63,7 @@ function App() {
             <Route path="/jednostki/choragiew-harcerek" element={<FemaleBanner />} />
             <Route path="/jednostki/szczepy" element={<Troops />} />
             <Route path="/jednostki/obwod" element={<Obwod />} />
-            <Route path="/znajdz-jednostke" element={<FindUnit />} />
+            <Route path="/znajdz-jednostke" element={<FindUnitPage />} />
             <Route path="/dla-rodzicow" element={<ParentsPage />} />
             <Route path="/dla-rodzicow/bezpieczenstwo" element={<ParentsSafety />} />
             <Route path="/dla-rodzicow/metoda" element={<ParentsMethod />} />
