@@ -17,6 +17,7 @@ import ParentsPage from "./pages/ParentsPage.jsx";
 import AuthoritiesPage from "./pages/AuthoritiesPage.jsx";
 import AboutZHRPage from "./pages/AboutZHRPage.jsx";
 import FindUnitPage from "./pages/FindUnitPage.jsx";
+import HoprNewsPage from "./pages/HoprNewsPage.jsx";
 import "./authorities.css";
 
 function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
@@ -75,7 +76,7 @@ function App() {
             <Route path="/dla-rodzicow/skladki" element={<FeesInsurancePage />} />
             <Route path="/dla-rodzicow/faktura" element={<InvoicePage />} />
             <Route path="/dla-mediow" element={<Media />} />
-            <Route path="/hopr" element={<HoprNews />} />
+            <Route path="/hopr" element={<HoprNewsPage />} />
             <Route path="/hopr/info" element={<HoprInfoPage />} />
             <Route path="/hopr/szkolenia" element={<HoprTrainings />} />
             <Route path="/nieruchomosci" element={<RealEstateInfo />} />
