@@ -24,7 +24,8 @@ function Authorities() { return <h2>Władze (Zarząd i KRO)</h2>; }
 // function CivilProtection() { return <h2>Ochrona Ludności i Obrona Cywilna</h2>; }
 function MaleBanner() { return <h2>Chorągiew Harcerzy</h2>; }
 function FemaleBanner() { return <h2>Chorągiew Harcerek</h2>; }
-function Troops() { return <h2>Szczepy</h2>; }
+import TroopsPage from "./pages/TroopsPage.jsx";
+// function Troops() { return <h2>Szczepy</h2>; }
 function Obwod() { return <h2>Ostrzeszowski Obwód ZHR</h2>; }
 // function FindUnit() { return <h2>Znajdź jednostkę</h2>; }
 function ParentsSafety() { return <h2>Bezpieczny ZHR</h2>; }
@@ -61,7 +62,7 @@ function App() {
             <Route path="/o-nas/ochrona-ludnosci" element={<CivilProtectionPage />} />
             <Route path="/jednostki/choragiew-harcerzy" element={<MaleBanner />} />
             <Route path="/jednostki/choragiew-harcerek" element={<FemaleBanner />} />
-            <Route path="/jednostki/szczepy" element={<Troops />} />
+            <Route path="/jednostki/szczepy" element={<TroopsPage />} />
             <Route path="/jednostki/obwod" element={<Obwod />} />
             <Route path="/znajdz-jednostke" element={<FindUnitPage />} />
             <Route path="/dla-rodzicow" element={<ParentsPage />} />
