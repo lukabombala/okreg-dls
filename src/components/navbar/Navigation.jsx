@@ -97,7 +97,7 @@ export default function Navigation() {
 
             </Nav>
             <div className="d-flex gap-2 ms-3">
-              <Button as={Link} to="/1-5-procent" variant="outline-primary">
+              <Button as={Link} to="https://procentnadolnyslask.zhr.pl/" variant="outline-primary">
                 1,5%
               </Button>
               <Button as={Link} to="/login" variant="primary">

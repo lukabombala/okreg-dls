@@ -11,51 +11,6 @@ export default function Home() {
     { label: "Wydarzeń Rocznie", value: "150+", icon: Calendar },
   ];
 
-  const news = [
-    {
-      id: 1,
-      title: "Zapisz się na Zimowisko 2025",
-      description: "Zapraszamy wszystkich harcerzy na zimowe wyjazdy. Termin zapisów do 15 grudnia.",
-      date: "2 listopada 2024",
-      category: "Wypoczynek",
-    },
-    {
-      id: 2,
-      title: "Szkolenie HAL - nowa edycja",
-      description: "Ruszają zapisy na szkolenie Harcerskich Animatorów Letniego Wypoczynku.",
-      date: "28 października 2024",
-      category: "Szkolenia",
-    },
-    {
-      id: 3,
-      title: "Rada Okręgu - podsumowanie",
-      description: "Odbyło się zebranie Rady Okręgu. Poznaj najważniejsze ustalenia i decyzje.",
-      date: "20 października 2024",
-      category: "Okręg",
-    },
-    {
-      id: 4,
-      title: "Nowy Szczep w Legnicy",
-      description: "W Legnicy powstał nowy szczep harcerski! Gratulujemy i życzymy powodzenia.",
-      date: "10 października 2024",
-      category: "Jednostki",
-    },
-    {
-      id: 5,
-      title: "Warsztaty dla Kadry",
-      description: "Zapraszamy kadrę na warsztaty z pracy z młodzieżą. Liczba miejsc ograniczona.",
-      date: "5 października 2024",
-      category: "Szkolenia",
-    },
-    {
-      id: 6,
-      title: "Zakończenie Sezonu Letniego",
-      description: "Podsumowaliśmy sezon letni podczas wspólnego ogniska. Dziękujemy za obecność!",
-      date: "30 września 2024",
-      category: "Wydarzenia",
-    },
-  ];
-
   return (
     <div className="min-vh-100">
       {/* Hero Section */}
@@ -109,90 +64,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* News Section */}
-      <section className="py-5">
-        <Container>
-          <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 gap-2">
-            <div>
-              <h2 className="mb-1">Ostatnie Aktualności</h2>
-              <div className="text-muted">Zobacz co się dzieje w naszym okręgu</div>
-            </div>
-          </div>
-          <Row className="g-4">
-            {news.map((item) => (
-              <Col xs={12} md={6} lg={4} key={item.id}>
-                <Card
-                  className="h-100 border-0"
-                  style={{
-                    borderRadius: "16px",
-                    background: "#fff",
-                    boxShadow: "0 0 0 rgba(0,0,0,0)",
-                    transition: "box-shadow 0.2s",
-                  }}
-                  onMouseOver={e => e.currentTarget.style.boxShadow = "0 4px 24px 0 rgba(45,80,22,0.08)"}
-                  onMouseOut={e => e.currentTarget.style.boxShadow = "0 0 0 rgba(0,0,0,0)"}
-                >
-                  <Card.Body>
-                    <div className="d-flex align-items-center gap-2 mb-2">
-                      <span
-                        style={{
-                          background: "#e8f0e3",
-                          color: "#2d5016",
-                          borderRadius: "8px",
-                          fontSize: "0.95em",
-                          padding: "2px 10px",
-                          fontWeight: 600,
-                        }}
-                      >
-                        {item.category}
-                      </span>
-                      <span className="text-muted small">{item.date}</span>
-                    </div>
-                    <h5 className="mb-1">{item.title}</h5>
-                    <div className="text-muted mb-3" style={{ fontSize: "0.97rem" }}>
-                      {item.description}
-                    </div>
-                    <Button
-                      as={Link}
-                      to={`/aktualnosci/${item.id}`}
-                      variant="link"
-                      className="p-0 align-items-center"
-                      style={{
-                        color: "#2d5016",
-                        fontWeight: 600,
-                        textDecoration: "none",
-                        fontSize: "1.05em",
-                      }}
-                    >
-                      Czytaj więcej
-                      <ArrowRight className="ms-2" size={16} />
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-          <div className="text-center mt-4">
-            <Button
-              as={Link}
-              to="/aktualnosci"
-              style={{
-                background: "#2d5016",
-                color: "#fff",
-                border: "none",
-                borderRadius: "8px",
-                padding: "10px 28px",
-                fontWeight: 600,
-              }}
-              className="align-items-center"
-            >
-              Zobacz wszystkie aktualności
-              <ArrowRight className="ms-2" size={18} />
-            </Button>
-          </div>
-        </Container>
-      </section>
-
       {/* Stats Section */}
       <section
         className="py-5"
@@ -230,7 +101,6 @@ export default function Home() {
           </Row>
         </Container>
       </section>
-
 
       {/* CTA Section */}
       <section
