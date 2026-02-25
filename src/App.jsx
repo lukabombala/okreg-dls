@@ -37,7 +37,8 @@ import FeesInsurancePage from "./pages/FeesInsurancePage.jsx";
 // function ParentsFees() { return <h2>Składki + Nr kont</h2>; }
 import InvoicePage from "./pages/InvoicePage.jsx";
 // function ParentsInvoice() { return <h2>Faktura za obóz/kolonię/zimowisko</h2>; }
-function Media() { return <h2>Dla Mediów</h2>; }
+import MediaPage from "./pages/MediaPage.jsx";
+// function Media() { return <h2>Dla Mediów</h2>; }
 function HoprNews() { return <h2>HOPR Aktualności</h2>; }
 import HoprInfoPage from "./pages/HoprInfoPage.jsx";
 // function HoprInfo() { return <h2>HOPR Ogólne Informacje</h2>; }
@@ -76,7 +77,7 @@ function App() {
             <Route path="/dla-rodzicow/metoda" element={<ScoutMethodPage />} />
             <Route path="/dla-rodzicow/skladki" element={<FeesInsurancePage />} />
             <Route path="/dla-rodzicow/faktura" element={<InvoicePage />} />
-            <Route path="/dla-mediow" element={<Media />} />
+            <Route path="/dla-mediow" element={<MediaPage />} />
             <Route path="/hopr" element={<HoprNewsPage />} />
             <Route path="/hopr/info" element={<HoprInfoPage />} />
             <Route path="/hopr/szkolenia" element={<HoprTrainingsPage />} />
