@@ -44,10 +44,11 @@ import HoprInfoPage from "./pages/HoprInfoPage.jsx";
 // function HoprInfo() { return <h2>HOPR Ogólne Informacje</h2>; }
 import HoprTrainingsPage from "./pages/HoprTrainingsPage.jsx";
 // function HoprTrainings() { return <h2>HOPR Najbliższe Szkolenia</h2>; }
-function RealEstateInfo() { return <h2>Nieruchomości Informacje</h2>; }
-function RealEstateWinsko() { return <h2>Wińsko</h2>; }
-function RealEstatePomorska() { return <h2>Rezerwacje Pomorskiej</h2>; }
-function RealEstateZatoka() { return <h2>Zatoka</h2>; }
+import PropertiesPage from "./pages/PropertiesPage.jsx";
+// function RealEstateInfo() { return <h2>Nieruchomości Informacje</h2>; }
+// function RealEstateWinsko() { return <h2>Wińsko</h2>; }
+// function RealEstatePomorska() { return <h2>Rezerwacje Pomorskiej</h2>; }
+// function RealEstateZatoka() { return <h2>Zatoka</h2>; }
 import ContactPage from "./pages/ContactPage.jsx";
 // function Contact() { return <h2>Kontakt</h2>; }
 function OneAndHalfPercent() { return <h2>1,5%</h2>; }
@@ -82,10 +83,7 @@ function App() {
             <Route path="/hopr" element={<HoprNewsPage />} />
             <Route path="/hopr/info" element={<HoprInfoPage />} />
             <Route path="/hopr/szkolenia" element={<HoprTrainingsPage />} />
-            <Route path="/nieruchomosci" element={<RealEstateInfo />} />
-            <Route path="/nieruchomosci/winsko" element={<RealEstateWinsko />} />
-            <Route path="/nieruchomosci/pomorska" element={<RealEstatePomorska />} />
-            <Route path="/nieruchomosci/zatoka" element={<RealEstateZatoka />} />
+            <Route path="/nieruchomosci" element={<PropertiesPage />} />
             <Route path="/kontakt" element={<ContactPage />} />
             <Route path="/1-5-procent" element={<OneAndHalfPercent />} />
             <Route path="/login" element={<Login />} />

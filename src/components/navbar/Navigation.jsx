@@ -32,19 +32,12 @@ const parentsItems = [
   { title: "Składki / ubezpieczenie", href: "/dla-rodzicow/skladki" },
   { title: "Faktura za obóz/kolonię/zimowisko", href: "/dla-rodzicow/faktura" },
 ];
-const realEstateItems = [
-  { title: "Informacje", href: "/nieruchomosci" },
-  { title: "Winsko - baza biwakowa", href: "/nieruchomosci/winsko" },
-  { title: "Pomorska - siedziba okregu", href: "/nieruchomosci/pomorska" },
-  { title: "HOW Zatoka", href: "/nieruchomosci/zatoka" },
-];
 
 const menus = [
   { title: "O NAS I ZHR", items: aboutItems, key: "about" },
   { title: "JEDNOSTKI", items: unitsItems, key: "units" },
   { title: "DLA RODZICÓW", items: parentsItems, key: "parents" },
   { title: "HOPR", items: hoprItems, key: "hopr" },
-  { title: "NIERUCHOMOŚCI", items: realEstateItems, key: "realestate" },
 ];
 
 const singleLinks = [
@@ -98,8 +91,10 @@ export default function Navigation() {
                   onDropdownMouseLeave={onDropdownMouseLeave}
                 />
               ))}
+              <Nav.Link as={Link} to="/nieruchomosci" className="fw-bold">NIERUCHOMOŚCI</Nav.Link>
               <Nav.Link as={Link} to="/dla-mediow" className="fw-bold">DLA MEDIÓW</Nav.Link>
               <Nav.Link as={Link} to="/kontakt" className="fw-bold">KONTAKT</Nav.Link>
+
             </Nav>
             <div className="d-flex gap-2 ms-3">
               <Button as={Link} to="/1-5-procent" variant="outline-primary">
