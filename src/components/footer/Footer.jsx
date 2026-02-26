@@ -4,89 +4,92 @@ import bannerLogos from './footer-logos.png';
 function Footer() {
   return (
     <footer style={{ background: '#31491d', color: '#fff' }}>
-      {/* Główna sekcja: 2 kolumny */}
-      <div className="container py-5 px-3 px-md-0">
-        <div className="row justify-content-center align-items-center">
-          {/* Kolumna: Finansowanie */}
-          <div className="col-12 col-md-6 mb-4 mb-md-0 text-center text-md-start">
-            <div
-              style={{
-                color: '#e8f0e3',
-                fontSize: '1.08rem',
-                fontWeight: 500,
-                letterSpacing: '0.01em',
-                lineHeight: 1.6,
-              }}
-            >
-              Związek Harcerstwa Rzeczypospolitej Okręg Dolnośląski realizuje
-              działania finansowane ze środków Narodowego Instytutu Wolności –
-              Centrum Rozwoju Społeczeństwa Obywatelskiego w ramach Rządowego
-              Programu Wsparcia Rozwoju Organizacji Harcerskich i Skautowych na
-              lata 2018-2030.
+      {/* Główna sekcja: 2 kolumny - białe tło */}
+      <div style={{ background: '#fff', color: '#31491d' }}>
+        <div className="container py-5 px-3 px-md-0">
+          <div className="row justify-content-center align-items-center">
+            {/* Kolumna: Finansowanie */}
+            <div className="col-12 col-md-6 mb-4 mb-md-0 text-center text-md-start">
+              <div
+                style={{
+                  color: '#31491d',
+                  fontSize: '1.08rem',
+                  fontWeight: 500,
+                  letterSpacing: '0.01em',
+                  lineHeight: 1.6,
+                }}
+              >
+                Związek Harcerstwa Rzeczypospolitej Okręg Dolnośląski realizuje
+                działania finansowane ze środków Narodowego Instytutu Wolności –
+                Centrum Rozwoju Społeczeństwa Obywatelskiego w ramach Rządowego
+                Programu Wsparcia Rozwoju Organizacji Harcerskich i Skautowych na
+                lata 2018-2030.
+              </div>
             </div>
-          </div>
-          {/* Kolumna: Kontakt */}
-          <div className="col-12 col-md-6 text-center text-md-end">
-            <h3
-              className="mb-3 fw-bold"
-              style={{ letterSpacing: '0.02em', color: '#fff' }}
-            >
-              Kontakt
-            </h3>
-            <ul className="list-unstyled mb-0" style={{ fontSize: '1.08rem' }}>
-              <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-end">
-                <span
-                  className="me-2 d-flex flex-column align-items-center"
-                  style={{ minWidth: 24 }}
-                >
-                  <MapPin size={18} />
-                </span>
-                <span>ul. Pomorska 17, 50-215 Wrocław</span>
-              </li>
-              <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-end">
-                <span
-                  className="me-2 d-flex flex-column align-items-center"
-                  style={{ minWidth: 24 }}
-                >
-                  <Mail size={18} />
-                </span>
-                <a
-                  href="mailto:kontakt@dolnoslaski.zhr.pl"
-                  className="text-white text-decoration-underline"
-                  style={{ opacity: 0.95 }}
-                >
-                  kontakt@dolnoslaski.zhr.pl
-                </a>
-              </li>
-              <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-end">
-                <span
-                  className="me-2 d-flex flex-column align-items-center"
-                  style={{ minWidth: 24 }}
-                >
-                  <Facebook size={18} />
-                </span>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white text-decoration-underline"
-                  style={{ opacity: 0.95 }}
-                >
-                  Facebook
-                </a>
-              </li>
-            </ul>
+            {/* Kolumna: Kontakt */}
+            <div className="col-12 col-md-6 text-center text-md-end">
+              <h3
+                className="mb-3 fw-bold"
+                style={{ letterSpacing: '0.02em', color: '#31491d' }}
+              >
+                Kontakt
+              </h3>
+              <ul className="list-unstyled mb-0" style={{ fontSize: '1.08rem' }}>
+                <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-end">
+                  <span
+                    className="me-2 d-flex flex-column align-items-center"
+                    style={{ minWidth: 24 }}
+                  >
+                    <MapPin size={18} color="#31491d" />
+                  </span>
+                  <span>ul. Pomorska 17, 50-215 Wrocław</span>
+                </li>
+                <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-end">
+                  <span
+                    className="me-2 d-flex flex-column align-items-center"
+                    style={{ minWidth: 24 }}
+                  >
+                    <Mail size={18} color="#31491d" />
+                  </span>
+                  <a
+                    href="mailto:kontakt@dolnoslaski.zhr.pl"
+                    className="text-decoration-underline"
+                    style={{ color: '#31491d', opacity: 0.95 }}
+                  >
+                    kontakt@dolnoslaski.zhr.pl
+                  </a>
+                </li>
+                <li className="mb-2 d-flex align-items-center justify-content-center justify-content-md-end">
+                  <span
+                    className="me-2 d-flex flex-column align-items-center"
+                    style={{ minWidth: 24 }}
+                  >
+                    <Facebook size={18} color="#31491d" />
+                  </span>
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-underline"
+                    style={{ color: '#31491d', opacity: 0.95 }}
+                  >
+                    Facebook
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Baner z grafikami */}
+      {/* Baner z grafikami - background-primary */}
       <div
         style={{
-          background: '#31491d',
+          background: 'var(--background-primary, #31491d)',
           padding: '5px 0 5px 0',
           display: 'flex',
           justifyContent: 'center',
+          color: '#fff',
         }}
       >
         <img
