@@ -1,15 +1,16 @@
 import { Mail, MapPin, Facebook } from 'lucide-react';
 import bannerLogos from './footer-logos.png';
+import mainLogo from '../../media/main-logo.png';
 
 function Footer() {
   return (
     <footer style={{ background: '#31491d', color: '#fff' }}>
-      {/* Główna sekcja: 2 kolumny - białe tło */}
+      {/* Główna sekcja: 3 kolumny - białe tło */}
       <div style={{ background: '#fff', color: '#31491d' }}>
         <div className="container py-5 px-3 px-md-0">
           <div className="row justify-content-center align-items-center">
             {/* Kolumna: Finansowanie */}
-            <div className="col-12 col-md-6 mb-4 mb-md-0 text-center text-md-start">
+            <div className="col-12 col-md-4 mb-4 mb-md-0 text-center text-md-start">
               <div
                 style={{
                   color: '#31491d',
@@ -26,8 +27,16 @@ function Footer() {
                 lata 2018-2030.
               </div>
             </div>
+            {/* Kolumna: Logo Okręgu */}
+            <div className="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center align-items-center">
+              <img
+                src={mainLogo}
+                alt="Logo Okręgu Dolnośląskiego ZHR"
+                style={{ maxHeight: '250px', maxWidth: '220px', objectFit: 'contain' }}
+              />
+            </div>
             {/* Kolumna: Kontakt */}
-            <div className="col-12 col-md-6 text-center text-md-end">
+            <div className="col-12 col-md-4 text-center text-md-end">
               <h3
                 className="mb-3 fw-bold"
                 style={{ letterSpacing: '0.02em', color: '#31491d' }}
@@ -104,17 +113,17 @@ function Footer() {
         />
       </div>
 
-      {/* Copyright */}
+      {/* Copyright - czarny pasek */}
       <div
         className="py-2 text-center"
         style={{
-          background: '#27381a',
-          color: '#cfdacb',
+          background: '#000',
+          color: '#fff',
           fontSize: '0.97rem',
           letterSpacing: '0.01em',
         }}
       >
-        &copy; 2025 Okręg Dolnośląski ZHR. Wszystkie prawa zastrzeżone.
+        &copy; 2026 Okręg Dolnośląski ZHR. Wszelkie prawa zastrzeżone.
       </div>
     </footer>
   );
