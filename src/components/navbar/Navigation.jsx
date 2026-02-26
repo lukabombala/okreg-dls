@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { NavbarMenu } from "./NavbarMenu";
 import { NavbarMobileSheet } from "./NavbarMobileSheet";
 import "./navbar.css";
-import { Home } from "lucide-react"; // Dodaj import ikony domku
-import mainLogo from '../../media/main-logo.jpeg';
+import mainLogoTransparent from '../../media/main-logo.png';
 
 // Zdefiniuj wszystkie grupy linków
 const hoprItems = [
@@ -68,7 +67,7 @@ export default function Navigation() {
       <Navbar expand="lg" sticky="top" className="zhr-navbar w-100 p-0" style={{ minHeight: "64px" }}>
         <div className="navbar-inner w-100">
           <Navbar.Brand as={Link} to="/" className="me-4 d-flex align-items-center gap-2">
-            <img src={mainLogo} alt="Logo ZHR" style={{ height: 40, width: 40, objectFit: 'contain', borderRadius: 8 }} />
+            <img src={mainLogoTransparent} alt="Logo ZHR" style={{ height: 40, width: 40, objectFit: 'contain', borderRadius: 8 }} />
             <span className="brand-text d-none d-md-flex flex-column">
               <span className="brand-title">Okręg Dolnośląski</span>
               <span className="brand-desc">ZHR</span>

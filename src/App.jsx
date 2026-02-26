@@ -71,7 +71,7 @@ function App() {
         <Navigation />
         <Container className="flex-grow-1" style={{ background: 'var(--background-primary)' }}>
           <Routes>
-            <Route path="/" element={<><PageHeader title="Strona główna" /><Home /></>} />
+            <Route path="/" element={<Home />} />
             <Route path="/o-nas" element={withHeader(AboutDistrictPage, "O Okręgu")()} />
             <Route path="/o-nas/wladze" element={withHeader(AuthoritiesPage, "Władze (Zarząd i KRO)")()} />
             <Route path="/o-nas/zhr" element={withHeader(AboutZHRPage, "O ZHR")()} />

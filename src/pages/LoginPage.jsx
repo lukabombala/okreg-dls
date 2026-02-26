@@ -3,9 +3,23 @@ import { Card, Form, Button, Container, Row, Col } from "react-bootstrap";
 
 export default function LoginPage() {
   return (
-    <div className="min-vh-100 d-flex align-items-center justify-content-center bg-light" style={{background: "var(--secondary, #f0f4ed)"}}>
+    <div
+      className="min-vh-100 bg-light"
+      style={{
+        background: "var(--secondary, #f0f4ed)",
+        width: "100vw",
+        position: "relative",
+        left: "50%",
+        right: "50%",
+        marginLeft: "-50vw",
+        marginRight: "-50vw",
+        minHeight: "100vh",
+        height: "100vh",
+        display: "block"
+      }}
+    >
       <Container>
-        <Row className="justify-content-center align-items-center g-5 flex-lg-row flex-column">
+        <Row className="justify-content-center flex-lg-row flex-column" style={{ minHeight: "50vh", alignItems: "center" }}>
           {/* Left Side - Image & Info */}
           <Col lg={6} className="d-none d-lg-block">
             <div className="position-relative rounded-4 overflow-hidden" style={{height: 520}}>
@@ -27,8 +41,8 @@ export default function LoginPage() {
           </Col>
 
           {/* Right Side - Login Form */}
-          <Col lg={6} md={10} xs={12}>
-            <Card className="shadow-sm border-0">
+          <Col lg={6} md={10} xs={12} className="d-flex align-items-center" style={{ minHeight: 520 }}>
+            <Card className="shadow-sm border-0 w-100">
               <Card.Body className="p-4">
                 <div className="mb-4">
                   <h3 className="mb-1">Zaloguj się</h3>
