@@ -6,7 +6,6 @@ import "../authorities.css";
 export default function HoprNewsPage() {
   return (
     <div className="authorities-container" style={{maxWidth: 900, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 18}}>Aktualności HOPR</h1>
       <div style={{fontSize: '1.08rem', marginBottom: 24, lineHeight: 1.7}}>
         Zapraszamy do odwiedzenia naszego fanpage'a na Facebooku.
       </div>

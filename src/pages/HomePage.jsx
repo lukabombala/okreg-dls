@@ -37,7 +37,7 @@ export default function Home() {
           className="position-absolute w-100 h-100"
           style={{
             background:
-              "linear-gradient(90deg, rgba(45,80,22,0.92) 0%, rgba(45,80,22,0.7) 100%)",
+              "linear-gradient(90deg, rgba(45,80,22,0.92) 0%, rgba(45,80,22,0.7) 5%)",
             left: 0,
             top: 0,
             zIndex: 2,
@@ -68,7 +68,8 @@ export default function Home() {
       <section
         className="py-5"
         style={{
-          background: "var(--secondary, #f0f4ed)",
+          background: "#fff",
+          color: "#31491d",
           width: "100vw",
           left: "50%",
           right: "50%",
@@ -78,21 +79,27 @@ export default function Home() {
         }}
       >
         <Container>
-          <h2 className="text-center mb-4">Okręg w Liczbach</h2>
+          <h2 className="text-center mb-4" style={{ color: "#31491d" }}>
+            Okręg w Liczbach
+          </h2>
           <Row className="g-4 justify-content-center">
             {stats.map((stat, idx) => {
               const Icon = stat.icon;
               return (
                 <Col xs={12} sm={6} lg={3} key={idx}>
-                  <Card className="text-center border-0 shadow-sm h-100">
+                  <Card className="text-center border-0 shadow-sm h-100" style={{ background: "#fff", color: "#31491d" }}>
                     <Card.Body>
                       <div className="d-flex justify-content-center mb-3">
-                        <div className="rounded-circle bg-success bg-opacity-10 d-flex align-items-center justify-content-center" style={{width: 48, height: 48}}>
-                          <Icon size={24} className="text-success" />
+                        <div className="rounded-circle bg-success bg-opacity-10 d-flex align-items-center justify-content-center" style={{ width: 48, height: 48 }}>
+                          <Icon size={24} style={{ color: "#2d5016" }} />
                         </div>
                       </div>
-                      <div className="fs-2 fw-bold mb-1">{stat.value}</div>
-                      <div className="text-muted">{stat.label}</div>
+                      <div className="fs-2 fw-bold mb-1" style={{ color: "#31491d" }}>
+                        {stat.value}
+                      </div>
+                      <div className="text-muted" style={{ color: "#31491d", opacity: 0.7 }}>
+                        {stat.label}
+                      </div>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -106,8 +113,8 @@ export default function Home() {
       <section
         className="py-5 d-flex align-items-center justify-content-center"
         style={{
-          background: "var(--primary, #2d5016)",
-          color: "var(--primary-foreground, #fff)",
+          background: "var(--background-primary, #31491d)",
+          color: "#fff",
           width: "100vw",
           left: "50%",
           right: "50%",
@@ -116,9 +123,11 @@ export default function Home() {
           position: "relative",
         }}
       >
-        <div className="w-100 text-center" style={{zIndex: 3}}>
-          <h2 className="mb-3">Dołącz do nas!</h2>
-          <p className="mb-4 mx-auto" style={{maxWidth: 600, opacity: 0.95}}>
+        <div className="w-100 text-center" style={{ zIndex: 3 }}>
+          <h2 className="mb-3" style={{ color: "#fff" }}>
+            Dołącz do nas!
+          </h2>
+          <p className="mb-4 mx-auto" style={{ maxWidth: 600, opacity: 0.95, color: "#fff" }}>
             Szukasz miejsca, gdzie możesz rozwijać swoje pasje, poznać wspaniałych ludzi i doświadczyć niezapomnianych przygód? ZHR czeka na Ciebie!
           </p>
           <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
@@ -126,7 +135,7 @@ export default function Home() {
               <MapPin className="me-2" size={20} />
               Znajdź najbliższą jednostkę
             </Button>
-            <Button as={Link} to="/dla-rodzicow" size="lg" variant="outline-light" className="fw-bold text-white border-white">
+            <Button as={Link} to="/dla-rodzicow" size="lg" variant="outline-light" className="fw-bold text-white border-white" style={{ borderColor: "#fff", color: "#fff" }}>
               Informacje dla rodziców
             </Button>
           </div>
@@ -134,7 +143,18 @@ export default function Home() {
       </section>
 
       {/* Quick Links */}
-      <section className="py-5">
+      <section
+        className="py-5"
+        style={{
+          background: "#fff",
+          width: "100vw",
+          left: "50%",
+          right: "50%",
+          marginLeft: "-50vw",
+          marginRight: "-50vw",
+          position: "relative",
+        }}
+      >
         <Container>
           <h2 className="text-center mb-4">Pomocne Informacje</h2>
           <Row className="g-4">
@@ -142,7 +162,7 @@ export default function Home() {
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body>
                   <h5>Dla Rodziców</h5>
-                  <div className="text-muted mb-3" style={{fontSize: "0.97rem"}}>
+                  <div className="text-muted mb-3" style={{ fontSize: "0.97rem" }}>
                     Wszystko, co rodzice powinni wiedzieć o ZHR: bezpieczeństwo, metoda harcerska, składki i więcej.
                   </div>
                   <Button as={Link} to="/dla-rodzicow" variant="link" className="p-0 align-items-center">
@@ -156,7 +176,7 @@ export default function Home() {
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body>
                   <h5>Przekaż 1,5%</h5>
-                  <div className="text-muted mb-3" style={{fontSize: "0.97rem"}}>
+                  <div className="text-muted mb-3" style={{ fontSize: "0.97rem" }}>
                     Wspieraj naszą działalność przekazując 1,5% swojego podatku. To nic nie kosztuje, a bardzo pomaga!
                   </div>
                   <Button as={Link} to="/1-5-procent" variant="link" className="p-0 align-items-center">
@@ -170,7 +190,7 @@ export default function Home() {
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body>
                   <h5>Nieruchomości</h5>
-                  <div className="text-muted mb-3" style={{fontSize: "0.97rem"}}>
+                  <div className="text-muted mb-3" style={{ fontSize: "0.97rem" }}>
                     Poznaj nasze bazy i ośrodki. Dowiedz się jak zarezerwować miejsce dla swojej drużyny.
                   </div>
                   <Button as={Link} to="/nieruchomosci" variant="link" className="p-0 align-items-center">

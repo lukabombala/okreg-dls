@@ -6,7 +6,6 @@ import "../authorities.css";
 export default function FeesInsurancePage() {
   return (
     <div className="authorities-container" style={{maxWidth: 900, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 18}}>Składki / ubezpieczenie</h1>
       <div style={{fontSize: '1.08rem', marginBottom: 24, lineHeight: 1.7}}>
         Składka jest to kwota pieniężna wpłacana przez jedną osobę do wspólnej kasy, na jakiś wspólny cel (Słownik Języka Polskiego PWN).
       </div>
@@ -16,11 +15,11 @@ export default function FeesInsurancePage() {
       <div style={{marginBottom: 18, lineHeight: 1.7}}>
         W przypadku osób do 16 roku życia członkostwa nabywa się za zgodą rodziców/opiekunów – podpisując zgodę na przynależność dziecka do ZHR, rodzic zobowiązuje się również do opłacania składek członkowskich dziecka.
       </div>
-      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: '#31491d'}}>Składka nie zależy od liczby zbiórek</h2>
+      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Składka nie zależy od liczby zbiórek</h2>
       <div style={{marginBottom: 18, lineHeight: 1.7}}>
         Składki nie rosną i nie maleją w zależności od tego, ile zbiórek odbyło się w danym miesiącu i w ilu dziecko uczestniczyło. Składka wynika z samego faktu przynależności do ZHR – tak jak w każdej organizacji opartej o wspólną odpowiedzialność i wspólne cele.
       </div>
-      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: '#31491d'}}>Na co przeznaczamy składki?</h2>
+      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: 'var(--primary) '}}>Na co przeznaczamy składki?</h2>
       <div style={{marginBottom: 18, lineHeight: 1.7}}>
         Składki pozwalają utrzymać i rozwijać działania ZHR na wielu poziomach. W praktyce finansują m.in.:
         <ul style={{marginLeft: 18, marginTop: 8, marginBottom: 8, lineHeight: 1.7}}>
@@ -31,16 +30,16 @@ export default function FeesInsurancePage() {
         </ul>
         Warto pamiętać, że część składki jest przekazywana do władz centralnych ZHR (16 złotych), część do okręgu (9 złotych). Pozostała kwota jest darowizną na daną drużynę wspierając jej bieżącą działalność, np. zakup materiałów, sprzętu, wyposażenia harcówki itp.
       </div>
-      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: '#31491d'}}>Jak opłacić składkę w Okręgu Dolnośląskim ZHR?</h2>
+      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Jak opłacić składkę w Okręgu Dolnośląskim ZHR?</h2>
       <div style={{marginBottom: 18, lineHeight: 1.7}}>
         Należy skontaktować się z drużynowym danej jednostki, który poda numer konta oraz wysokość składki. Prawidłowym tytułem przelewu jest: <i>[imię i nazwisko podopiecznego]</i>, składki za <i>[miesiąc]</i>.
       </div>
-      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: '#31491d'}}>Ubezpieczenie</h2>
+      <h2 style={{fontSize: '1.15rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Ubezpieczenie</h2>
       <div style={{marginBottom: 18, lineHeight: 1.7}}>
-        Uczestnicy i kadra wszystkich przedsięwzięć organizowanych przez Okręg Dolnośląski ZHR są objęci <a href="https://zhr.pl/ubezpieczenie/" target="_blank" rel="noopener noreferrer" style={{color: '#466c2b', fontWeight: 600}}>ubezpieczeniem</a> od następstw nieszczęśliwych wypadków (NNW).
+        Uczestnicy i kadra wszystkich przedsięwzięć organizowanych przez Okręg Dolnośląski ZHR są objęci <a href="https://zhr.pl/ubezpieczenie/" target="_blank" rel="noopener noreferrer" style={{color: 'var(--primary)', fontWeight: 600}}>ubezpieczeniem</a> od następstw nieszczęśliwych wypadków (NNW).
       </div>
       <div style={{marginBottom: 18, lineHeight: 1.7}}>
-        W razie potrzeby zgłoszenia wniosku o wypłatę odszkodowania NNW, prosimy o zapoznanie się z instrukcją dostępną <a href="https://zhr.pl/ubezpieczenie/" target="_blank" rel="noopener noreferrer" style={{color: '#466c2b', fontWeight: 600}}>tutaj</a>.
+        W razie potrzeby zgłoszenia wniosku o wypłatę odszkodowania NNW, prosimy o zapoznanie się z instrukcją dostępną <a href="https://zhr.pl/ubezpieczenie/" target="_blank" rel="noopener noreferrer" style={{color: 'var(--primary)', fontWeight: 600}}>tutaj</a>.
       </div>
     </div>
   );

@@ -43,59 +43,12 @@ export default function LoginPage() {
           {/* Right Side - Login Form */}
           <Col lg={6} md={10} xs={12} className="d-flex align-items-center" style={{ minHeight: 520 }}>
             <Card className="shadow-sm border-0 w-100">
-              <Card.Body className="p-4">
-                <div className="mb-4">
-                  <h3 className="mb-1">Zaloguj się</h3>
-                  <div className="text-muted mb-2" style={{fontSize: "1rem"}}>
-                    Wpisz swój email i hasło, aby uzyskać dostęp do panelu członka
-                  </div>
-                </div>
-                <Form>
-                  <Form.Group className="mb-3" controlId="loginEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="twoj.email@przyklad.pl"
-                      autoComplete="username"
-                      required
-                    />
-                  </Form.Group>
-                  <Form.Group className="mb-3" controlId="loginPassword">
-                    <Form.Label>Hasło</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="••••••••"
-                      autoComplete="current-password"
-                      required
-                    />
-                  </Form.Group>
-                  <div className="d-flex justify-content-between align-items-center mb-3">
-                    <Form.Check
-                      type="checkbox"
-                      id="remember"
-                      label="Zapamiętaj mnie"
-                    />
-                    <Button variant="link" className="p-0 text-decoration-none text-primary" style={{fontSize: "0.95rem"}}>
-                      Zapomniałeś hasła?
-                    </Button>
-                  </div>
-                  <Button type="submit" variant="primary" className="w-100 mb-2">
-                    Zaloguj się
-                  </Button>
-                </Form>
-                <div className="mt-4 pt-3 border-top">
-                  <p className="text-center text-muted mb-0" style={{fontSize: "0.97rem"}}>
-                    Nie masz konta?{" "}
-                    <Button variant="link" className="p-0 text-decoration-none">
-                      Skontaktuj się z hufcem
-                    </Button>
-                  </p>
-                </div>
-                <div className="mt-4 p-3 bg-light rounded-3">
-                  <p className="mb-0 text-muted" style={{fontSize: "0.95rem"}}>
-                    <strong>Demo:</strong> Kliknij "Zaloguj się" aby zobaczyć panel członka (nie wymaga prawdziwych danych)
-                  </p>
-                </div>
+              <Card.Body className="p-4 d-flex flex-column align-items-center justify-content-center" style={{minHeight: 400}}>
+                <h3 className="mb-4">Zaloguj się</h3>
+                <Button type="button" variant="primary" size="lg" className="mb-3 px-4 py-2 fw-bold" style={{fontSize: '1.15rem'}}>
+                  Zaloguj się za pomocą konta zhr.pl
+                </Button>
+
               </Card.Body>
             </Card>
           </Col>

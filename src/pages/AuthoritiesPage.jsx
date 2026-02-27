@@ -70,17 +70,21 @@ const placeholderImg = "https://placehold.co/120x120?text=ZDJĘCIE";
 export default function AuthoritiesPage() {
   return (
     <div className="authorities-container">
-      <h1>Władze (Zarząd i KRO)</h1>
-      <h2>Kadencja 2025-2027</h2>
+      <h2 style={{ color: "var(--primary)" }}>Kadencja 2025-2027</h2>
       <section>
-        <h3>Zarząd Okręgu Dolnośląskiego ZHR</h3>
+        <h3 style={{ color: "var(--primary)" }}>Zarząd Okręgu Dolnośląskiego ZHR</h3>
         <div className="authorities-grid">
           {boardMembers.map((member, idx) => (
-            <div className="authority-card" key={idx}>
-              <img src={placeholderImg} alt="Zdjęcie" className="authority-photo" />
+            <div className="authority-card" key={idx} style={{ width: 260 }}>
+              <img
+                src={placeholderImg}
+                alt="Zdjęcie"
+                className="authority-photo"
+                style={{ width: 140, height: 140, borderRadius: "50%" }}
+              />
               <div className="authority-info">
                 <strong>{member.name}</strong>
-                <div>{member.role}</div>
+                <div style={{ color: "#000" }}>{member.role}</div>
                 {member.email && (
                   <div className="authority-email">
                     <a href={`mailto:${member.email}`}>{member.email}</a>
@@ -92,14 +96,19 @@ export default function AuthoritiesPage() {
         </div>
       </section>
       <section>
-        <h3>Komisja Rewizyjna Okręgu</h3>
+        <h3 style={{ color: "var(--primary)" }}>Komisja Rewizyjna Okręgu</h3>
         <div className="authorities-grid">
           {auditCommittee.map((member, idx) => (
-            <div className="authority-card" key={idx}>
-              <img src={placeholderImg} alt="Zdjęcie" className="authority-photo" />
+            <div className="authority-card" key={idx} style={{ width: 260 }}>
+              <img
+                src={placeholderImg}
+                alt="Zdjęcie"
+                className="authority-photo"
+                style={{ width: 140, height: 140, borderRadius: "50%" }}
+              />
               <div className="authority-info">
                 <strong>{member.name}</strong>
-                <div>{member.role}</div>
+                <div style={{ color: "#000" }}>{member.role}</div>
               </div>
             </div>
           ))}

@@ -6,7 +6,6 @@ import "../authorities.css";
 export default function SafeZHRPage() {
   return (
     <div className="authorities-container" style={{maxWidth: 900, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 18}}>Bezpieczny ZHR</h1>
       <div style={{fontSize: '1.08rem', marginBottom: 24, lineHeight: 1.7}}>
         Bezpieczny ZHR to program, którego celem jest ochrona naszych podopiecznych przed przemocą, krzywdzeniem i wykorzystaniem – tak, aby harcerstwo było przestrzenią wychowania, rozwoju i zaufania. Program porządkuje zasady działania kadry, wzmacnia kompetencje instruktorek i instruktorów oraz daje konkretne narzędzia do reagowania, gdy pojawia się niepokojąca sytuacja.
       </div>
@@ -20,7 +19,7 @@ export default function SafeZHRPage() {
         </ul>
       </div>
       <div style={{marginBottom: 18, lineHeight: 1.7}}>
-        Więcej o programie przeczytasz <a href="https://zhr.pl/bezpieczny-zhr/" target="_blank" rel="noopener noreferrer" style={{color: '#466c2b', fontWeight: 600}}>tutaj</a>.
+        Więcej o programie przeczytasz <a href="https://zhr.pl/bezpieczny-zhr/" target="_blank" rel="noopener noreferrer" style={{color: 'var(--primary)', fontWeight: 600}}>tutaj</a>.
       </div>
     </div>
   );

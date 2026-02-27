@@ -65,7 +65,6 @@ const troops = [
 export default function TroopsPage() {
   return (
     <div className="authorities-container" style={{maxWidth: 900, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 18}}>Szczepy</h1>
       <div style={{fontSize: '1.08rem', marginBottom: 24, lineHeight: 1.7}}>
         Szczep (wg „Regulaminu szczepu ZHR”) to jednostka organizacyjna ZHR, którą drużyny lub gromady mogą powołać, aby podtrzymywać tradycję środowiska oraz prowadzić wspólną pracę organizacyjną i gospodarczą.
       </div>
@@ -84,10 +83,10 @@ export default function TroopsPage() {
                 <div style={{flex: '1 1 180px', minWidth: 160}}>
                   <div style={{fontSize: '1.01rem', marginBottom: 2}}><b>Rok powołania:</b> {t.year || <span style={{color:'#bbb'}}>brak danych</span>}</div>
                   <div style={{fontSize: '1.01rem', marginBottom: 2}}>
-                    <b>Linki:</b> {t.links.length > 0 ? t.links.map((l, i) => <a key={i} href={l.url} target="_blank" rel="noopener noreferrer" style={{color: '#466c2b', fontWeight: 600, marginLeft: i > 0 ? 8 : 4}}>{l.label}</a>) : <span style={{color:'#bbb'}}>brak</span>}
+                    <b>Linki:</b> {t.links.length > 0 ? t.links.map((l, i) => <a key={i} href={l.url} target="_blank" rel="noopener noreferrer" style={{color: 'var(--primary)', fontWeight: 600, marginLeft: i > 0 ? 8 : 4}}>{l.label}</a>) : <span style={{color:'#bbb'}}>brak</span>}
                   </div>
                   <div style={{fontSize: '1.01rem', marginBottom: 2}}>
-                    <b>Kontakt:</b> {t.contact ? <a href={`mailto:${t.contact}`} style={{color: '#466c2b', fontWeight: 600}}>{t.contact}</a> : <span style={{color:'#bbb'}}>brak</span>}
+                    <b>Kontakt:</b> {t.contact ? <a href={`mailto:${t.contact}`} style={{color: 'var(--primary)', fontWeight: 600}}>{t.contact}</a> : <span style={{color:'#bbb'}}>brak</span>}
                   </div>
                 </div>
               </div>

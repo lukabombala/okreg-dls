@@ -8,7 +8,6 @@ const photoUrl = "https://placehold.co/520x320?text=Podpisanie+umowy+OL+ZHR";
 export default function CivilProtectionPage() {
   return (
     <div className="authorities-container" style={{maxWidth: 1200, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 32}}>Ochrona Ludności i Obrona Cywilna</h1>
       <div style={{display: 'flex', flexWrap: 'wrap', gap: 32, justifyContent: 'center', alignItems: 'flex-start'}}>
         <div style={{flex: '1 1 320px', minWidth: 260, maxWidth: 340, fontSize: '1.07rem', lineHeight: 1.7}}>
           20 listopada 2025 roku Okręg Dolnośląski ZHR podpisał porozumienie z Wojewodą Dolnośląską w sprawie realizacji Programu Ochrony Ludności, co oznacza jeszcze ściślejszą współpracę na rzecz bezpieczeństwa mieszkańców regionu. W praktyce obejmuje to szkolenia i ćwiczenia, wsparcie działań informacyjnych i pomocowych oraz gotowość naszych kadr do podejmowania zadań wtedy, gdy liczy się szybka reakcja, sprawna organizacja i odpowiedzialność.

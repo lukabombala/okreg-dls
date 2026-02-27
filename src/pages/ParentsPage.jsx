@@ -69,43 +69,6 @@ export default function ParentsPage() {
 
   return (
     <div className="min-vh-100">
-      {/* Hero */}
-      <section
-        className="position-relative d-flex align-items-center justify-content-center"
-        style={{
-          height: 400,
-          overflow: "hidden",
-          width: "100vw",
-          left: "50%",
-          right: "50%",
-          marginLeft: "-50vw",
-          marginRight: "-50vw",
-          position: "relative",
-        }}
-      >
-        <img
-          src={{mainbanner}}
-          alt="Dla rodziców"
-          className="position-absolute w-100 h-100 object-fit-cover"
-          style={{ objectFit: "cover", left: 0, top: 0, zIndex: 1 }}
-        />
-        <div
-          className="position-absolute w-100 h-100"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(45,80,22,0.92) 0%, rgba(45,80,22,0.7) 100%)",
-            left: 0,
-            top: 0,
-            zIndex: 2,
-          }}
-        />
-        <Container className="position-relative text-center text-white" style={{ zIndex: 3 }}>
-          <h1 className="mb-3">Dla Rodziców</h1>
-          <p className="mb-0 mx-auto" style={{ maxWidth: 600, opacity: 0.95 }}>
-            Wszystkie najważniejsze informacje dla rodziców dzieci i młodzieży w ZHR
-          </p>
-        </Container>
-      </section>
 
       <Container className="py-5">
         {/* Quick Links */}
@@ -187,8 +150,8 @@ export default function ParentsPage() {
                       }}
                     />
                   </div>
-                  <div>
-                    <strong>Rozwój charakteru</strong> - Wychowujemy odpowiedzialnych, samodzielnych i odważnych ludzi
+                  <div style={{ color: "#000" }}>
+                    <strong style={{ color: "#000" }}>Rozwój charakteru</strong> - Wychowujemy odpowiedzialnych, samodzielnych i odważnych ludzi
                   </div>
                 </li>
                 <li className="d-flex align-items-start gap-3 mb-3">
@@ -210,8 +173,8 @@ export default function ParentsPage() {
                       }}
                     />
                   </div>
-                  <div>
-                    <strong>Praktyczne umiejętności</strong> - Dzieci uczą się pierwszej pomocy, orientacji w terenie, survivalowych
+                  <div style={{ color: "#000" }}>
+                    <strong style={{ color: "#000" }}>Praktyczne umiejętności</strong> - Dzieci uczą się pierwszej pomocy, orientacji w terenie, survivalowych
                   </div>
                 </li>
                 <li className="d-flex align-items-start gap-3 mb-3">
@@ -233,8 +196,8 @@ export default function ParentsPage() {
                       }}
                     />
                   </div>
-                  <div>
-                    <strong>Przyjaźnie na całe życie</strong> - Harcerstwo to wspólnota, która trwa przez lata
+                  <div style={{ color: "#000" }}>
+                    <strong style={{ color: "#000" }}>Przyjaźnie na całe życie</strong> - Harcerstwo to wspólnota, która trwa przez lata
                   </div>
                 </li>
                 <li className="d-flex align-items-start gap-3 mb-3">
@@ -256,8 +219,8 @@ export default function ParentsPage() {
                       }}
                     />
                   </div>
-                  <div>
-                    <strong>Bezpieczeństwo</strong> - Wszyscy instruktorzy są przeszkoleni i sprawdzeni
+                  <div style={{ color: "#000" }}>
+                    <strong style={{ color: "#000" }}>Bezpieczeństwo</strong> - Wszyscy instruktorzy są przeszkoleni i sprawdzeni
                   </div>
                 </li>
               </ul>
@@ -277,7 +240,7 @@ export default function ParentsPage() {
 
         {/* FAQs */}
         <section className="mb-5">
-          <h2 className="mb-4 text-center">Najczęściej Zadawane Pytania</h2>
+          <h2 className="mb-4 text-center" style={{ color: "#000" }}>Najczęściej Zadawane Pytania</h2>
           <Row className="justify-content-center">
             <Col md={10} lg={8}>
               <Accordion>
@@ -297,15 +260,15 @@ export default function ParentsPage() {
         {/* CTA */}
         <Card className="bg-success text-white border-0 rounded-4 shadow-sm">
           <Card.Body className="text-center">
-            <h4 className="mb-2">Masz więcej pytań?</h4>
-            <div className="mb-4">
+            <h4 className="mb-2" style={{ color: "#000" }}>Masz więcej pytań?</h4>
+            <div className="mb-4" style={{ color: "#000" }}>
               Skontaktuj się z nami lub odwiedź najbliższą jednostkę
             </div>
             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
               <Button as={Link} to="/znajdz-jednostke" variant="light" className="fw-bold text-success">
                 Znajdź jednostkę
               </Button>
-              <Button as={Link} to="/kontakt" variant="outline-light" className="fw-bold text-white border-white">
+              <Button as={Link} to="/kontakt" variant="outline-light" className="fw-bold border-white" style={{ color: "#000", borderColor: "#fff" }}>
                 Kontakt
               </Button>
             </div>

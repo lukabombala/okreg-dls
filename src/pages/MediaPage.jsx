@@ -24,7 +24,7 @@ const pressKitPeople = [
 ];
 
 function Accordion({ items }) {
-  const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState(0);
   return (
     <div style={{margin: '24px 0'}}>
       {items.map((item, idx) => (
@@ -49,7 +49,19 @@ function Accordion({ items }) {
             {item.title}
           </button>
           {open === idx && (
-            <div style={{background: '#fff', border: '1px solid #b7c9a2', borderTop: 'none', borderRadius: '0 0 8px 8px', padding: '16px 18px', fontSize: '1.04rem'}}>
+            <div
+              style={{
+                background: '#fff',
+                border: '1px solid #b7c9a2',
+                borderTop: 'none',
+                borderRadius: '0 0 8px 8px',
+                padding: '16px 18px',
+                fontSize: '1.04rem',
+                color: '#000',
+                WebkitTextFillColor: '#000',
+                textShadow: 'none',
+              }}
+            >
               {item.content}
             </div>
           )}
@@ -85,7 +97,7 @@ export default function MediaPage() {
             <img src={placeholderImg} alt="Zdjęcie" className="authority-photo" />
             <div className="authority-info" style={{textAlign: 'center'}}>
               <strong>{p.name}</strong>
-              <div>{p.role}</div>
+              <div style={{color: '#000'}}>{p.role}</div>
               <div style={{fontSize: '0.97em', marginTop: 4}}>
                 <a href={`mailto:${p.email}`} style={{color: 'var(--primary)', fontWeight: 600}}>{p.email}</a>
               </div>

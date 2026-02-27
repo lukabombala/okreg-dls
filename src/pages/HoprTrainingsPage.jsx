@@ -33,7 +33,6 @@ const trainings = [
 export default function HoprTrainingsPage() {
   return (
     <div className="authorities-container" style={{maxWidth: 1000, margin: '0 auto', paddingBottom: 48}}>
-      <h1 style={{marginBottom: 18}}>Najbliższe szkolenia</h1>
       <div style={{fontSize: '1.08rem', marginBottom: 24, lineHeight: 1.7}}>
         Każdy członek ZHR, który działa w ramach konkretnej jednostki bądź jest instruktorem harcerskim i ma ukończone 15 lat, może być członkiem HOPR. Należy ukończyć kurs, zdobyć stopień oraz uczestniczyć w akcjach i zabezpieczeniach organizowanych przez HOPR DLS. Stopnie HOPR, to w kolejności:
         <ol style={{margin: '12px 0 0 24px'}}>
@@ -43,15 +42,15 @@ export default function HoprTrainingsPage() {
           <li>Instruktor HOPR (znaczek HOPR z czerwoną podkładką)</li>
         </ol>
       </div>
-      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: '#31491d'}}>Wykaz najbliższych szkoleń</h2>
+      <h2 style={{fontSize: '1.13rem', margin: '32px 0 10px 0', color: 'var(--primary)'}}>Wykaz najbliższych szkoleń</h2>
       <div style={{overflowX: 'auto'}}>
         <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '1.07rem', marginBottom: 24}}>
           <thead>
             <tr style={{background: '#f3f7ef'}}>
-              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2'}}>Kurs</th>
-              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2'}}>Data</th>
-              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2'}}>Miejscowość</th>
-              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2'}}>Zgłoszenia</th>
+              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2', color: 'var(--primary)'}}>Kurs</th>
+              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2', color: 'var(--primary)'}}>Data</th>
+              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2', color: 'var(--primary)'}}>Miejscowość</th>
+              <th style={{padding: '10px 8px', border: '1px solid #b7c9a2', color: 'var(--primary)'}}>Zgłoszenia</th>
             </tr>
           </thead>
           <tbody>
