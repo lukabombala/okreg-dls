@@ -49,9 +49,6 @@ export function NavbarMenu({
         onToggle={val => setOpenDropdown(val ? dropdownKey : null)}
         renderMenuOnMount
         className="p-0"
-        popperConfig={{
-          strategy: "fixed",
-        }}
       >
         <div
           onMouseEnter={() => onDropdownMouseEnter(dropdownKey)}

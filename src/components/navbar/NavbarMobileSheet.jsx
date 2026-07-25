@@ -1,8 +1,11 @@
 import React from "react";
 import { Offcanvas, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Moon, SunMedium } from "lucide-react";
 
-export function NavbarMobileSheet({ show, onHide, menus, singleLinks }) {
+export function NavbarMobileSheet({ show, onHide, menus, singleLinks, theme, setTheme }) {
+  const isDark = theme === "dark";
+
   return (
     <Offcanvas show={show} onHide={onHide} placement="end" className="navbar-mobile-sheet">
       <Offcanvas.Header closeButton>
@@ -10,6 +13,15 @@ export function NavbarMobileSheet({ show, onHide, menus, singleLinks }) {
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Nav className="flex-column gap-2">
+          <Button
+            type="button"
+            variant="outline-primary"
+            className="theme-toggle mb-2"
+            onClick={() => setTheme(isDark ? "light" : "dark")}
+          >
+            {isDark ? <SunMedium size={18} /> : <Moon size={18} />}
+            <span>{isDark ? "Jasny motyw" : "Ciemny motyw"}</span>
+          </Button>
           {singleLinks
             .filter((l) => l.title === "STRONA GŁÓWNA")
             .map((l) => (
@@ -48,11 +60,13 @@ export function NavbarMobileSheet({ show, onHide, menus, singleLinks }) {
                 </Button>
               ) : l.title === "1,5%" ? (
                 <Button
-                  as={Link}
-                  to={l.href}
+                  as="a"
+                  href={l.href}
                   key={l.href}
                   variant="outline-primary"
                   className="mt-2"
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={onHide}
                 >
                   {l.title}

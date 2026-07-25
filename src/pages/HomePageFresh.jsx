@@ -103,10 +103,10 @@ export default function Home() {
                 <Card.Body>
                   <h5>Dla rodziców</h5>
                   <div className="muted mb-3">
-                        Najważniejsze informacje dla rodziców: bezpieczeństwo, metoda harcerska, składki i organizacja.
+                    Najważniejsze informacje dla rodziców: bezpieczeństwo, metoda harcerska, składki i organizacja.
                   </div>
                   <Button as={Link} to="/dla-rodzicow" variant="link" className="p-0 align-items-center fw-bold text-decoration-none">
-                        Zobacz szczegóły
+                    Zobacz szczegóły
                     <ArrowRight className="ms-2" size={16} />
                   </Button>
                 </Card.Body>
@@ -115,12 +115,12 @@ export default function Home() {
             <Col xs={12} md={4}>
               <Card className="info-card h-100">
                 <Card.Body>
-                      <h5>Przekaż 1,5%</h5>
+                  <h5>Przekaż 1,5%</h5>
                   <div className="muted mb-3">
-                        Wspieraj naszą działalność, przekazując 1,5% podatku. To prosty gest, który naprawdę pomaga.
+                    Wspieraj naszą działalność, przekazując 1,5% podatku. To prosty gest, który naprawdę pomaga.
                   </div>
                   <Button as={Link} to="/1-5-procent" variant="link" className="p-0 align-items-center fw-bold text-decoration-none">
-                        Jak przekazać
+                    Jak przekazać
                     <ArrowRight className="ms-2" size={16} />
                   </Button>
                 </Card.Body>
@@ -131,10 +131,10 @@ export default function Home() {
                 <Card.Body>
                   <h5>Nieruchomości</h5>
                   <div className="muted mb-3">
-                        Poznaj nasze bazy i ośrodki. Zobacz, jak zarezerwować miejsce dla swojej drużyny.
+                    Poznaj nasze bazy i ośrodki. Zobacz, jak zarezerwować miejsce dla swojej drużyny.
                   </div>
                   <Button as={Link} to="/nieruchomosci" variant="link" className="p-0 align-items-center fw-bold text-decoration-none">
-                        Przejdź dalej
+                    Przejdź dalej
                     <ArrowRight className="ms-2" size={16} />
                   </Button>
                 </Card.Body>

@@ -7,14 +7,13 @@ import "./navbar.css";
 import { Home, Moon, SunMedium } from "lucide-react";
 import { menuGroups, singleLinks } from "../../siteMap.jsx";
 
-export default function Navigation({ theme, setTheme }) {
+export default function NavigationFresh({ theme, setTheme }) {
   const [showMobile, setShowMobile] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const closeTimeout = useRef();
   const isDark = theme === "dark";
   const menus = menuGroups;
 
-  // Funkcje do obsługi hoverów na dropdownach
   const onDropdownMouseEnter = (dropdownKey) => {
     clearTimeout(closeTimeout.current);
     setOpenDropdown(dropdownKey);
@@ -40,7 +39,7 @@ export default function Navigation({ theme, setTheme }) {
               <Nav.Link as={Link} to="/" className="fw-bold" aria-label="Strona główna">
                 <Home size={22} style={{ position: "relative", top: "-1px" }} />
               </Nav.Link>
-              {menuGroups.map(menu => (
+              {menuGroups.map((menu) => (
                 <NavbarMenu
                   key={menu.key}
                   title={menu.title}
@@ -55,7 +54,6 @@ export default function Navigation({ theme, setTheme }) {
               <Nav.Link as={Link} to="/nieruchomosci" className="fw-bold">NIERUCHOMOŚCI</Nav.Link>
               <Nav.Link as={Link} to="/dla-mediow" className="fw-bold">DLA MEDIÓW</Nav.Link>
               <Nav.Link as={Link} to="/kontakt" className="fw-bold">KONTAKT</Nav.Link>
-
             </Nav>
             <div className="d-flex gap-2 ms-3">
               <Button

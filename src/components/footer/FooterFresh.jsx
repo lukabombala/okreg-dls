@@ -1,7 +1,7 @@
 import { Mail, MapPin, Facebook } from 'lucide-react';
 import bannerLogos from './footer-logos.png';
 
-function Footer() {
+function FooterFresh() {
   return (
     <footer className="site-footer">
       <div className="container py-5 px-3 px-md-0">
@@ -59,4 +59,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterFresh;

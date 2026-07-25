@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button, Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Shield, BookOpen, DollarSign, FileText, Heart, ArrowRight } from "lucide-react";
+import { Shield, BookOpen, DollarSign, FileText, ArrowRight } from "lucide-react";
 import mainbanner from "../media/main_banner.jpg";
 
 // Zamień na swój komponent lub <img> jeśli nie masz ImageWithFallback
@@ -68,87 +68,39 @@ export default function ParentsPage() {
   ];
 
   return (
-    <div className="min-vh-100">
-      {/* Hero */}
-      <section
-        className="position-relative d-flex align-items-center justify-content-center"
-        style={{
-          height: 400,
-          overflow: "hidden",
-          width: "100vw",
-          left: "50%",
-          right: "50%",
-          marginLeft: "-50vw",
-          marginRight: "-50vw",
-          position: "relative",
-        }}
-      >
-        <img
-          src={{mainbanner}}
-          alt="Dla rodziców"
-          className="position-absolute w-100 h-100 object-fit-cover"
-          style={{ objectFit: "cover", left: 0, top: 0, zIndex: 1 }}
-        />
-        <div
-          className="position-absolute w-100 h-100"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(45,80,22,0.92) 0%, rgba(45,80,22,0.7) 100%)",
-            left: 0,
-            top: 0,
-            zIndex: 2,
-          }}
-        />
-        <Container className="position-relative text-center text-white" style={{ zIndex: 3 }}>
-          <h1 className="mb-3">Dla Rodziców</h1>
-          <p className="mb-0 mx-auto" style={{ maxWidth: 600, opacity: 0.95 }}>
-            Wszystkie najważniejsze informacje dla rodziców dzieci i młodzieży w ZHR
-          </p>
-        </Container>
+    <div className="page-shell section-stack">
+      <section className="hero-section" style={{ minHeight: 420 }}>
+        <img src={mainbanner} alt="Dla rodziców" className="hero-media" />
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <Container className="hero-content-inner text-center">
+            <div className="eyebrow mb-3">Dla rodziców</div>
+            <h1 className="hero-title">Spokojne, czytelne informacje dla rodzin naszych harcerzy i harcerek.</h1>
+            <p className="section-lead text-white-50 mx-auto mb-0" style={{ maxWidth: 720 }}>
+              Wszystkie najważniejsze informacje dla rodziców dzieci i młodzieży w ZHR
+            </p>
+          </Container>
+        </div>
       </section>
 
-      <Container className="py-5">
-        {/* Quick Links */}
+      <Container className="section-block">
         <Row className="g-4 mb-5">
           {topics.map((topic, index) => {
             const Icon = topic.icon;
             return (
               <Col xs={12} md={6} lg={4} key={index}>
-                <Card className="h-100 border-0 shadow-sm">
+                <Card className="feature-card h-100">
                   <Card.Body>
-                    <div
-                      className="d-flex align-items-center justify-content-center mb-3"
-                    >
-                      <div
-                        style={{
-                          width: 48,
-                          height: 48,
-                          borderRadius: 12,
-                          background: topic.color,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
+                    <div className="d-flex align-items-center justify-content-center mb-3">
+                      <div className="d-flex align-items-center justify-content-center" style={{ width: 52, height: 52, borderRadius: 16, background: topic.color, boxShadow: "0 12px 24px rgba(0,0,0,0.08)" }}>
                         <Icon size={24} color="#fff" />
                       </div>
                     </div>
                     <h5 className="mb-1">{topic.title}</h5>
-                    <div className="text-muted mb-3" style={{ fontSize: "0.97rem" }}>
+                    <div className="muted mb-3">
                       {topic.description}
                     </div>
-                    <Button
-                      as={Link}
-                      to={topic.href}
-                      variant="link"
-                      className="p-0 align-items-center"
-                      style={{
-                        color: "#2d5016",
-                        fontWeight: 600,
-                        textDecoration: "none",
-                        fontSize: "1.05em",
-                      }}
-                    >
+                    <Button as={Link} to={topic.href} variant="link" className="p-0 align-items-center fw-bold text-decoration-none">
                       Czytaj więcej
                       <ArrowRight className="ms-2" size={16} />
                     </Button>
@@ -159,12 +111,12 @@ export default function ParentsPage() {
           })}
         </Row>
 
-        {/* Why ZHR */}
         <section className="mb-5">
           <Row className="align-items-center g-5">
             <Col lg={6}>
-              <h2 className="mb-4">Dlaczego ZHR?</h2>
-              <p className="mb-4 text-muted">
+              <div className="badge-soft mb-3">Dlaczego ZHR?</div>
+              <h2 className="section-title mb-4">Dlaczego ZHR?</h2>
+              <p className="section-lead mb-4">
                 Związek Harcerstwa Rzeczypospolitej to organizacja z ponad 100-letnią tradycją, która kształtuje młode pokolenia zgodnie z zasadami skautingu i polskiego patriotyzmu.
               </p>
               <ul className="list-unstyled">
@@ -275,9 +227,8 @@ export default function ParentsPage() {
           </Row>
         </section>
 
-        {/* FAQs */}
         <section className="mb-5">
-          <h2 className="mb-4 text-center">Najczęściej Zadawane Pytania</h2>
+          <h2 className="section-title mb-4 text-center">Najczęściej Zadawane Pytania</h2>
           <Row className="justify-content-center">
             <Col md={10} lg={8}>
               <Accordion>
@@ -295,7 +246,7 @@ export default function ParentsPage() {
         </section>
 
         {/* CTA */}
-        <Card className="bg-success text-white border-0 rounded-4 shadow-sm">
+        <Card className="feature-card bg-success text-white border-0 rounded-4 shadow-sm">
           <Card.Body className="text-center">
             <h4 className="mb-2">Masz więcej pytań?</h4>
             <div className="mb-4">

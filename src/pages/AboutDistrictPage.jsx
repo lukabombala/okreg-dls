@@ -9,39 +9,42 @@ const logoFemale = "https://placehold.co/140x140?text=LOGO+CHORĄGWI+ŻEŃSKIEJ"
 
 export default function AboutDistrictPage() {
   return (
-    <div className="aboutzhr-container authorities-container">
-      <h1>O Okręgu</h1>
-      <div style={{display: 'flex', flexWrap: 'wrap', gap: 32, justifyContent: 'center', alignItems: 'flex-start', marginBottom: 32}}>
-        <div style={{flex: '1 1 340px', minWidth: 280, maxWidth: 400, display: 'flex', justifyContent: 'center'}}>
-          <img src={mapPlaceholder} alt="MAPKA OKRĘGU" style={{width: 320, height: 320, background: '#dbe7d0', borderRadius: 28, objectFit: 'cover', display: 'block'}} />
-        </div>
-        <div style={{flex: '2 1 420px', minWidth: 320, maxWidth: 700}}>
-          <div style={{border: '1px solid #b7c9a2', borderRadius: 8, padding: 16, background: '#fff', marginBottom: 18, fontSize: '1.05rem'}}>
-            Okręg Dolnośląski jest terenową jednostką Związku Harcerstwa Rzeczypospolitej. Skupia i koordynuje działalność gromad zuchowych, drużyn harcerek i harcerzy, środowisk wędrowniczych oraz kręgów wędrowników starszego działających na obszarze województwa dolnośląskiego. Tworzy wspólnotę wychowawczą opartą o metodę harcerską i służbę podejmowaną lokalnie – w szkołach, parafiach i społecznościach naszych miast i miejscowości.
+    <div className="page-shell section-stack authorities-container">
+      <div className="badge-soft mb-2">O Okręgu</div>
+      <h1 className="page-title">O Okręgu</h1>
+      <div className="section-block">
+        <div className="d-flex flex-wrap gap-4 justify-content-center align-items-start">
+          <div className="d-flex justify-content-center" style={{ flex: "1 1 340px", minWidth: 280, maxWidth: 400 }}>
+            <img src={mapPlaceholder} alt="MAPKA OKRĘGU" style={{ width: 320, aspectRatio: "1 / 1", background: "var(--surface-muted)", borderRadius: 28, objectFit: "cover" }} />
           </div>
-          <div style={{fontWeight: 600, fontSize: '1.13rem', margin: '18px 0 10px 0'}}>Okręg tworzą:</div>
-          <div style={{display: 'flex', gap: 32, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 18}}>
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 160}}>
-              <img src={logoMale} alt="LOGO CHORĄGWI MĘSKIEJ" style={{width: 110, height: 110, background: '#dbe7d0', borderRadius: 18, marginBottom: 8}} />
-              <div style={{fontSize: '0.98rem', textAlign: 'center'}}>Dolnośląska Chorągiew Harcerzy im. Orląt Lwowskich</div>
+          <div style={{ flex: "2 1 420px", minWidth: 320, maxWidth: 700 }}>
+            <div className="prose-panel mb-3">
+              Okręg Dolnośląski jest terenową jednostką Związku Harcerstwa Rzeczypospolitej. Skupia i koordynuje działalność gromad zuchowych, drużyn harcerek i harcerzy, środowisk wędrowniczych oraz kręgów wędrowników starszego działających na obszarze województwa dolnośląskiego. Tworzy wspólnotę wychowawczą opartą o metodę harcerską i służbę podejmowaną lokalnie – w szkołach, parafiach i społecznościach naszych miast i miejscowości.
             </div>
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 160}}>
-              <img src={logoFemale} alt="LOGO CHORĄGWI ŻEŃSKIEJ" style={{width: 110, height: 110, background: '#dbe7d0', borderRadius: 18, marginBottom: 8}} />
-              <div style={{fontSize: '0.98rem', textAlign: 'center'}}>Dolnośląska Chorągiew Harcerek "Rzeka" im. św. Jadwigi Śląskiej</div>
+            <div className="badge-soft mb-3">Okręg tworzą</div>
+            <div className="d-flex gap-4 flex-wrap justify-content-center mb-3">
+              <div className="d-flex flex-column align-items-center" style={{ minWidth: 160 }}>
+                <img src={logoMale} alt="LOGO CHORĄGWI MĘSKIEJ" style={{ width: 110, aspectRatio: "1 / 1", background: "var(--surface-muted)", borderRadius: 18, marginBottom: 8 }} />
+                <div className="text-center">Dolnośląska Chorągiew Harcerzy im. Orląt Lwowskich</div>
+              </div>
+              <div className="d-flex flex-column align-items-center" style={{ minWidth: 160 }}>
+                <img src={logoFemale} alt="LOGO CHORĄGWI ŻEŃSKIEJ" style={{ width: 110, aspectRatio: "1 / 1", background: "var(--surface-muted)", borderRadius: 18, marginBottom: 8 }} />
+                <div className="text-center">Dolnośląska Chorągiew Harcerek "Rzeka" im. św. Jadwigi Śląskiej</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div style={{margin: '18px 0 0 0', fontSize: '1.05rem'}}>
-        <div style={{marginBottom: 8}}><b>Zgodnie § 5 Statutu ZHR:</b></div>
-        <blockquote style={{fontStyle: 'italic', background: '#f3f7ef', borderLeft: '4px solid #7a9c4b', padding: '10px 18px', borderRadius: 8, marginBottom: 18}}>
+      <div className="section-block">
+        <div className="mb-2"><b>Zgodnie § 5 Statutu ZHR:</b></div>
+        <blockquote className="prose-panel" style={{ fontStyle: "italic", borderLeft: "4px solid var(--secondary)" }}>
           „Celem Związku jest: wychowanie człowieka metodą harcerską:<br/>
           – w myśl Przyrzeczenia i Prawa Harcerskiego,<br/>
           – do świadomej postawy obywatelskiej w poczuciu współodpowiedzialności za losy własnej rodziny, narodu i państwa polskiego,<br/>
           – upowszechnianie w społeczeństwie ideałów harcerskich.”
         </blockquote>
-        <div style={{marginBottom: 8}}><b>Do głównych obszarów działania Okręgu Dolnośląskiego ZHR należą m.in.:</b></div>
-        <ul style={{marginLeft: 18, marginBottom: 24, lineHeight: 1.7}}>
+        <div className="mb-2"><b>Do głównych obszarów działania Okręgu Dolnośląskiego ZHR należą m.in.:</b></div>
+        <ul className="soft-list">
           <li>upowszechnianie idei harcerskiej i promowanie wychowania metodą harcerską,</li>
           <li>nadzór nad działalnością jednostek organizacyjnych ZHR działających w okręgu,</li>
           <li>reprezentowanie ZHR wobec instytucji publicznych oraz partnerów społecznych,</li>
